@@ -1,7 +1,8 @@
 """
 叮咚鱼塘
 定时设置：
-cron: 28 0,8,12,18 * * *
+cron: 33 7,19 * * *
+const $ = new Env("叮咚鱼塘");
 """
 import time
 import requests
