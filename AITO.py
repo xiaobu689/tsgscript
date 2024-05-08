@@ -1,7 +1,11 @@
+"""
+华为AITO
+定时设置：
+cron: 40 6 * * *
+const $ = new Env("华为AITO");
+"""
 import datetime
-
 import requests
-
 # from sign.notify import notify_pushPlus
 
 

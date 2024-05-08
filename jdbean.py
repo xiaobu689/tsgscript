@@ -1,4 +1,9 @@
-# -*- coding: utf-8 -*-
+"""
+京东签到领京豆
+定时设置：
+cron: 35 8 * * *
+const $ = new Env("京东");
+"""
 import logging
 import os
 import re

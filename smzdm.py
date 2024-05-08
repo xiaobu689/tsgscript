@@ -1,3 +1,9 @@
+"""
+什么值得买签到
+定时设置：
+cron: 30 7 * * *
+const $ = new Env("什么值得买");
+"""
 import hashlib
 import os
 import re

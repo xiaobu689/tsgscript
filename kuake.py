@@ -1,4 +1,9 @@
-# # -*- coding: utf-8 -*-
+"""
+夸克网盘签到
+定时设置：
+cron: 43 7 * * *
+const $ = new Env("夸克网盘");
+"""
 import logging
 import json
 import os
