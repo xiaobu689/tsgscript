@@ -5,13 +5,15 @@ cron: 40 6 * * *
 const $ = new Env("华为AITO");
 """
 import datetime
+import os
+
 import requests
 # from sign.notify import notify_pushPlus
 
 
 class AITO:
-    def __init__(self):
-        self.token = "ec863d1aa79322ea55869f33733548ca"
+    def __init__(self, cookie):
+        self.cookie = cookie
 
     def sign_account_info(self):
         message = ''
@@ -20,7 +22,7 @@ class AITO:
         headers = {
             'Host': 'aim.longwisedata.com',
             'Sec-Fetch-Site': 'same-origin',
-            'Cookie': 'acw_tc=3adc341b17149639626511657ea77c9832618aacbca265ae2f67d9cc2e; _orgCustId=ZXsqd0idDdwlbxWyDPhQaR0CrhQxbXfurBtHt5AK937zWIx6KDNrcUSCPuijrZIrCyd36T/SGUnFHtUlffsLwQ==; za_itid=MdI2mIxCwnsSd2KqUOJqERgpI5YgOwgCeLd7c78tSBVzeQ2AQlgCuOI/mIv+hCFAvogk50Hb053fWPhvqseFFQ==; _xflow_uid=uid_283c2261-47e2-4ee7-9bf3-abc1c2f394a6',
+            'Cookie': self.cookie,
             'Connection': 'keep-alive',
             'Sec-Fetch-Mode': 'cors',
             'Accept': 'application/json, text/plain, */*',
@@ -50,7 +52,7 @@ class AITO:
             'Host': 'mall.longwisedata.com',
             'Sec-Fetch-Site': 'same-origin',
             'Accept-Encoding': 'gzip, deflate, br',
-            'Cookie': '_xflow_session_id=session_id_f10e25ef-8e9e-435c-840a-fc264d7a23f5; _xflow_session_time=2024-05-05%2009:50:15; _xflow_traceid=traceid_241cf353-22a5-4e21-81ca-12baf4f88150; _xflow_is_first_day=true; _xflow_super_trace_id=super_trace_id_214f687a-3de7-4020-8629-1782e91789f7; _xflow_uid=uid_283c2261-47e2-4ee7-9bf3-abc1c2f394a6; _orgCustId=SzRESqTtcbS/FBrLpqzRcugpDNw9lIF6lZlZhHy1ltm5R9XYwcUwqham65tu3tSMaSj3PEejC2woXcgQEQXYbA==; za_ciid=AeLQbgEAAAAAAAAAAAFsYW5nemjpAdlilQAAAAAAAJnGQQEAAAAAAQEAAAAAAM+ROgEAAAAAAWxhbmd6aGleb29OVks1SEVLRGtNRU1IeGRuUFVIS3FQU2RU0QEAamF2YS51dGlsLkRhdOUBWk9xRo8BAAAAAdlilQAAAAAAAQIB6g4TAAAAAAAAAdlilQAAAAAAAekOEwAAAAAAAQIB6g4TAAAAAAABgkgAAW9vTlZLNUhFS0RrTUVNSHhkblBVSEtxUFNkVNEAAA==; za_itid=TEVqiV9ZnUxEgK5gEDqLKDyHg46E3gDBt63lCiroqo95qkVWpP9wgG5u1l6cV7aB58HeQhkGRTizVPkEOLIOkg==; _e=3',
+            'Cookie': self.cookie,
             'Connection': 'keep-alive',
             'Sec-Fetch-Mode': 'cors',
             'Accept': 'application/json',
@@ -81,7 +83,7 @@ class AITO:
             'Origin': 'https://aim.longwisedata.com',
             'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.49(0x18003127) NetType/4G Language/zh_CN',
             'Connection': 'keep-alive',
-            'Cookie': 'acw_tc=2760774517148148697987730e4ea08e7b609fdffdc408a1d515248e2f5029',
+            'Cookie': self.cookie,
             'Sec-Fetch-Dest': 'empty'
         }
 
@@ -109,7 +111,7 @@ class AITO:
         headers = {
             'Host': 'aim.longwisedata.com',
             'Sec-Fetch-Site': 'same-origin',
-            'Cookie': 'acw_tc=2760774517148148697987730e4ea08e7b609fdffdc408a1d515248e2f5029',
+            'Cookie': self.cookie,
             'Connection': 'keep-alive',
             'Sec-Fetch-Mode': 'cors',
             'Accept': 'application/json, text/plain, */*',
@@ -149,7 +151,7 @@ class AITO:
                         'Origin': 'https://aim.longwisedata.com',
                         'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.49(0x18003127) NetType/4G Language/zh_CN',
                         'Connection': 'keep-alive',
-                        'Cookie': 'acw_tc=2760774517148148697987730e4ea08e7b609fdffdc408a1d515248e2f5029',
+                        'Cookie': self.cookie,
                         'Sec-Fetch-Dest': 'empty'
                     }
 
@@ -171,7 +173,7 @@ class AITO:
         headers = {
             'Host': 'aim.longwisedata.com',
             'Sec-Fetch-Site': 'same-origin',
-            'Cookie': 'acw_tc=2760774517148148697987730e4ea08e7b609fdffdc408a1d515248e2f5029',
+            'Cookie': self.cookie,
             'Connection': 'keep-alive',
             'Sec-Fetch-Mode': 'cors',
             'Accept': 'application/json, text/plain, */*',
@@ -214,22 +216,22 @@ class AITO:
         if "失败" in msg1:
             print("账号信息获取失败，请检查cookie是否正确")
             return
-        else:
-            msg2 = self.sign_in()
-            # 积分进度
-            msg3, integral3 = self.sign_account_info()
-            diff_integra=  integral3 - integral1
-            _msg = f'积分 + {diff_integra}'
-            push_msg += msg1 + msg2 + msg3 + _msg
-            result = self.gift_list()
-            first_gift_price = result["result"]["skus"][0]["price"]
-            tmp_msg = ''
-            if integral3 >= first_gift_price:
-                tmp_msg = f"已达标，可前往兑换奖品！\n"
-            else:
-                tmp_msg = f'{integral3}/{first_gift_price}'
-            push_msg += f'✅{first_gift_price}进度: {tmp_msg}\n'
-            push_msg += f'✅{first_gift_price}库存: {result["result"]["skus"][0]["stock"]}'
+        # else:
+        #     msg2 = self.sign_in()
+        #     # 积分进度
+        #     msg3, integral3 = self.sign_account_info()
+        #     diff_integra=  integral3 - integral1
+        #     _msg = f'积分 + {diff_integra}'
+        #     push_msg += msg1 + msg2 + msg3 + _msg
+        #     result = self.gift_list()
+        #     first_gift_price = result["result"]["skus"][0]["price"]
+        #     tmp_msg = ''
+        #     if integral3 >= first_gift_price:
+        #         tmp_msg = f"已达标，可前往兑换奖品！\n"
+        #     else:
+        #         tmp_msg = f'{integral3}/{first_gift_price}'
+        #     push_msg += f'✅{first_gift_price}进度: {tmp_msg}\n'
+        #     push_msg += f'✅{first_gift_price}库存: {result["result"]["skus"][0]["stock"]}'
 
             # 推送
             # notify_pushPlus(title, push_msg)
@@ -241,4 +243,11 @@ class AITO:
 
 
 if __name__ == '__main__':
-    AITO().main()
+    env_name = 'AITO_COOKIE'
+    AITO_COOKIE = os.getenv(env_name)
+    AITO_COOKIE = 'acw_tc=2760774d17155292543476252e9b1a62e32359fcf2d299db8b47a1e4b05f9e'
+    if not AITO_COOKIE:
+        print(f'⛔️未获取到ck变量：请检查变量 {env_name} 是否填写')
+        exit(0)
+    # 创建 AITO 实例并调用 main 方法
+    print(AITO(AITO_COOKIE).main())

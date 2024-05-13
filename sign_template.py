@@ -167,37 +167,33 @@ import requests
 #     response = requests.post(url, headers=headers, data=data)
 #     print("----------------------response=", response.text)
 
-def test():
-    import requests
-    import json
+import requests
 
-    # 设置请求的URL和头部信息
-    url = 'https://stdcrm.dtmiller.com/scrm-promotion-service/mini/wly/user/info'
+
+def video_like(video_id):
+    url = 'https://ysapi.elecfans.com/api/video/publish/thumbsup'
     headers = {
-        'Host': 'stdcrm.dtmiller.com',
-        'Connection': 'keep-alive',
-        'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJtaW5pYXBwX2N1c3RvbWVyIiwic3ViIjoib0JMbkk1ZnllSnMzWU5WY2hpeFZWdXRCaHlETSIsImV4cCI6MTcxNTE5NTEzNH0.mq6KyLJ_QbgSy6ZrnXp3xrtc2HPfjxq1-WBg9QNlrbmtZsnKQ7ZJXA3awsfIuFm1PO9L_Izh4v9TLEVDUQ9OUg',
-        'Content-Type': 'application/json',  # 注意这里的Content-Type是大小写敏感的
-        'Accept-Encoding': 'gzip,compress,br,deflate',
-        'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.49(0x18003129) NetType/4G Language/zh_CN',
-        'Referer': 'https://servicewechat.com/wxed3cf95a14b58a26/197/page-frame.html'
+        "Host": "ysapi.elecfans.com",
+        "Connection": "keep-alive",
+        "Authorization": "2739780024a3b12975c0f5d2f6b0095db9ba1251a328c929dce8967dd8ad65fc",
+        "Content-Type": "application/json;charset=UTF-8",
+        "model": "MI 8 Lite",
+        "timestamp": 1715514780,
+        "User-Agent": "okhttp/3.12.6",
+        "platform": "android",
+        "sign": "438469300d4f4aaefcd1d2ec7826217b500b8256",
+        "version": "2.7.4",
+        "Accept-Encoding": "gzip"
     }
 
-    # 假设此请求不需要发送任何数据（即GET请求），如果有需要发送的数据，请修改此处
-    # 例如，如果需要发送JSON数据，可以使用json参数
-    # data = {'key': 'value'}
+    data = {'type': 1, 'video_id': 20151}
 
-    # 使用requests库发送GET请求（或者根据实际需要发送POST请求）
-    response = requests.get(url, headers=headers)
+    # 因为Content-Type是application/x-www-form-urlencoded，我们不需要直接发送JSON
+    # requests库会自动将字典转换为这种格式的字符串
+    response = requests.post(url, headers=headers, data=data)
 
-    # 检查响应状态码并处理响应内容
-    if response.status_code == 200:
-        # 如果成功，处理响应内容
-        print(response.json())
-    else:
-        # 如果失败，打印错误信息
-        print(f"请求失败，状态码：{response.status_code}")
-        print(response.text)
+    return response.json()
+
 
 
 
@@ -205,4 +201,14 @@ def test():
 
 #
 if __name__ == '__main__':
-    test()
+    # 假设你有一个包含多个video_id的列表
+    video_ids = ['20151']
+
+    for video_id in video_ids:
+        result = video_like(video_id)
+        print(f"点赞结果: {result}")
+
+        if result.get('message') == 'success！':  # 假设API返回了一个包含message的JSON对象
+            print(f"✅ 账号点赞视频成功🎉")
+        else:
+            print(f"❌ 账号点赞视频失败")

@@ -518,7 +518,7 @@ class YP:
         except Exception as e:
             print(f'错误信息: {e}')
         if successful_shakes == 0:
-            print(f'❌未摇中 x {self.click_num}')
+            print(f'😢你运气太差了，摇了{self.click_num}次，一次没中！')
 
     # 查询剩余抽奖次数
     @catch_errors
