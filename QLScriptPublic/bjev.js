@@ -1,6 +1,6 @@
 /**
  * cron 45 21 * * *  bjev.js
- * Show:北京汽车 点赞每天5次 10分 签到10分 转发2次 20分  7天签到100分 30天1000分 半年5000 1年1W
+ * Show:北京汽车 点赞每天5次 10分 签到10分 转发2次 20分  7天签到100分 30天1000分 半年5000 1年1W  
  * 合计1月2300分  商城最低价4900分 平均2个月换一次
  * @author https://github.com/smallfawn/QLScriptPublic
  * 变量名:bjevAuth
@@ -24,14 +24,16 @@ class UserInfo {
         this.taskList = []//任务列表
         this.task_num_like = null //待做点赞任务数
         this.task_num_share = null//待做转发任务数
+        this.userPoint = null
 
     }
     async main() {
-        $.log(`===== 开始第[${this.index}]个账号 =====]`)
+        $.log(`===== 开始第[${this.index}]个账号 =====`)
         await this.user_info();
         if (this.ckStatus) {
+            await this.user_point()
+            $.log(`✅运行前 - 积分[${this.userPoint}]🎉`)
             await this.task_list()
-            console.log("-----------1111111111111111list=", this.taskList)
             if (this.taskList.length > 0) {
                 for (let task of this.taskList) {
                     //status == "0" 未完成
@@ -40,9 +42,6 @@ class UserInfo {
                     if (task.taskGroupCode == "ENTITY_LIKE") {
                         if (task.status == "0") {
                             this.task_num_like = Number(task.progressLimit) - Number(task.progress)
-
-                        } else if (task.status == "1") {
-                            this.task_award(task.taskGroupCode)
                         }
                         $.log(`点赞 ${task.progress} / ${task.progressLimit}`)
                         //点赞
@@ -59,8 +58,6 @@ class UserInfo {
                     } else if (task.taskGroupCode == "ENTITY_SHARE") {
                         if (task.status == "0") {
                             this.task_num_share = Number(task.progressLimit) - Number(task.progress)
-                        } else if (task.status == "1") {
-                            this.task_award(task.taskGroupCode)
                         }
                         $.log(`转发 ${task.progress} / ${task.progressLimit}`)
                         //转发
@@ -72,66 +69,31 @@ class UserInfo {
                     await this.art_list()
                     if (this.artList.length > 0) {
                         //点赞5次  转发2次
-                        //暂定7
-                        for (let i = 0; i < 7; i++) {
+                        for (let i = 0; i < 5; i++) {
                             await this.task_like(this.artList[i])
                             await this.task_share(this.artList[i])
                         }
                     }
-                    await this.task_list()
+
                 }
             }
-
-
-        }
-
-
-
-    }
-    sha256(str) {
-        const crypto = require("crypto");
-        return crypto.createHash("sha256").update(str).digest("hex");
-
-    }
-    get_headers(method, url, body = "") {
-        url = url.replace("https://beijing-gateway-customer.app-prod.bjev.com.cn", "")
-        let path = url.split('?')[0]
-        let params = url.split('?')[1].replaceAll('&', '').toLowerCase()
-        method = method.toUpperCase();
-        let timestamp = new Date().getTime()
-        const key = `96189e76b405f63f8460367ab2ec74ac`
-        let str
-        if (method == "POST") {
-            str = `${method}${path}ice-auth-appkey:5795393720ice-auth-timestamp:${timestamp}json=${body}${params}${key}`
-        } else {
-            str = `${method}${path}ice-auth-appkey:5795393720ice-auth-timestamp:${timestamp}${params}${key}`
+            await this.task_list()
+            if (this.taskList.length > 0) {
+                for (let task of this.taskList) {
+                    if (task.status == "1") {
+                        await this.task_award(task.taskGroupCode)
+                    }
+                }
+            }
+            await this.user_point()
+            $.log(`✅运行后 - 积分[${this.userPoint}]🎉`)
 
         }
-        const sign = this.sha256(encodeURIComponent(str))
-        return {
-            "Content-Type": "application/json;charset=UTF-8",
-            "User-Agent": "(Android 10; Xiaomi MI 8 Lite Build/V12.0.1.0.QDTCNXM 3.11.1 135 release bjApp baic-app-android)",
-            "versionInfo": "(Android 10; Xiaomi MI 8 Lite Build/V12.0.1.0.QDTCNXM 3.11.1 135 release bjApp baic-app-android)",
-            "Cache-Control": "no-cache",
-            "Authorization": `Bearer ` + this.ck,
-            //"userId": "",
-            "appKey": 5795393720,
-            "ice-auth-appkey": 5795393720,
-            "ice-auth-timestamp": timestamp,
-            "ice-auth-sign": sign,
-            "Content-Type": "application/json;charset=UTF-8",
-            "Host": "beijing-gateway-customer.app-prod.bjev.com.cn",
-            "Connection": "Keep-Alive",
-            "Accept-Encoding": "gzip"
-        }
+
+
+
     }
-    get_uuid() {
-        return 'xxxxxxxx-xxxx-xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-            var r = Math.random() * 16 | 0,
-                v = c == 'x' ? r : (r & 0x3 | 0x8);
-            return v.toString(16);
-        });
-    }
+
 
     async addSign() {
         try {
@@ -162,13 +124,14 @@ class UserInfo {
             let options = {
                 fn: "信息查询",
                 method: "get",
-                url: `https://beijing-gateway-customer.app-prod.bjev.com.cn/beijing-zone-member/userCustomer/getUserInfo?buildVersion=2024042516371500`,
+                url: `https://beijing-gateway-customer.app-prod.bjev.com.cn/beijing-zone-member/userCustomer/getUserInfo?buildVersion=138&uuid_check=${this.get_uuid()}`,
             }
             options.headers = this.get_headers(options.method, options.url)
+            //console.log(options);
             let { body: result } = await httpRequest(options);
-            console.log("11111111111111111111111111",options);
+            //console.log(options);
             result = JSON.parse(result);
-            console.log("222222222222222",result);
+            //console.log(result);
             if (result.code == "0") {
                 //console.log(`✅账号[${this.index}]  欢迎用户: ${result.errcode}🎉`);
                 $.log(`✅[${result.data.name}][${result.data.code}][${result.data.id}]🎉`)
@@ -182,16 +145,39 @@ class UserInfo {
             console.log(e);
         }
     }
+    async user_point() {
+        try {
+            let options = {
+                fn: "积分查询",
+                method: "get",
+                url: `https://beijing-gateway-customer.app-prod.bjev.com.cn/beijing-zone-member/userCustomer/getPersonalCenter?uuid_check=${this.get_uuid()}`,
+            }
+            options.headers = this.get_headers(options.method, options.url)
+            let { body: result } = await httpRequest(options);
+            //console.log(options);
+            result = JSON.parse(result);
+            //console.log(result);
+            if (result.code == "0") {
+                //console.log(`✅账号[${this.index}]  欢迎用户: ${result.errcode}🎉`);
+                this.userPoint = result.data.availableIntegral
+
+            } else {
+                console.log(`❌[积分查询]失败`);
+                this.ckStatus = false;
+            }
+        } catch (e) {
+            console.log(e);
+        }
+    }
 
     async art_list() {
         try {
             let options = {
                 fn: "文章列表",
                 method: "get",
-                url: `https://beijing-gateway-customer.app-prod.bjev.com.cn/beijing-info-configure/exterior/recommend/list?pageIndex=1&pageSize=20&uuid_check=${this.get_uuid()}`,
+                url: `https://beijing-gateway-customer.app-prod.bjev.com.cn/beijing-zone-dynamic/exterior/dynamic/list?isRecommend=1&pageIndex=2&pageSize=10&isHot=1&uuid_check=${this.get_uuid()}`,
             }
             options.headers = this.get_headers(options.method, options.url)
-            //console.log(options);
             let { body: result } = await httpRequest(options);
             //console.log(options);
             result = JSON.parse(result);
@@ -200,9 +186,12 @@ class UserInfo {
                 //领取成功
                 //console.log(`✅[文章列表]成功`)
                 for (let artId of result.data.dataList) {
-                    if (artId.modelType == "2") {
-                        this.artList.push(artId.modelContent.id)
+                    console.log(artId.liked)
+                    if (artId.liked == "-1") {//判断未点赞的
+                        this.artList.push(artId.id)
+
                     }
+
                 }
             } else {
                 console.log(`❌[${options.fn}]失败`)
@@ -298,7 +287,7 @@ class UserInfo {
             let { body: result } = await httpRequest(options);
             //console.log(options);
             result = JSON.parse(result);
-            console.log("22222222222222222222result=", result);
+            //console.log(result);
             if (result.code == "0") {
                 this.taskList = result.data[1].items
 
@@ -310,6 +299,50 @@ class UserInfo {
         } catch (e) {
             console.log(e);
         }
+    }
+
+    sha256(str) {
+        const crypto = require("crypto");
+        return crypto.createHash("sha256").update(str).digest("hex");
+
+    }
+    get_headers(method, url, body = "") {
+        url = url.replace("https://beijing-gateway-customer.app-prod.bjev.com.cn", "")
+        let path = url.split('?')[0]
+        let params = url.split('?')[1].split('&').sort().join("").toLowerCase()
+        method = method.toUpperCase();
+        let timestamp = new Date().getTime()
+        const key = `162e31f57f928bb34df22f99f04875de`
+        let str
+        if (method == "POST") {
+            str = `${method}${path}ice-auth-appkey:6164883796ice-auth-timestamp:${timestamp}json=${body}${params}${key}`
+        } else {
+            str = `${method}${path}ice-auth-appkey:6164883796ice-auth-timestamp:${timestamp}${params}${key}`
+
+        }        const sign = this.sha256(encodeURIComponent(str))
+        return {
+            "Content-Type": "application/json;charset=UTF-8",
+            "User-Agent": "(Android 10; Xiaomi MI 8 Lite Build/V12.0.1.0.QDTCNXM 3.13.1 138 release bjApp baic-app-android)",
+            "versionInfo": "(Android 10; Xiaomi MI 8 Lite Build/V12.0.1.0.QDTCNXM 3.13.1 138 release bjApp baic-app-android)",
+            "Cache-Control": "no-cache",
+            "Authorization": `Bearer ` + this.ck,
+            //"userId": "",
+            "appKey": 6164883796,
+            "ice-auth-appkey": 6164883796,
+            "ice-auth-timestamp": timestamp,
+            "ice-auth-sign": sign,
+            "Content-Type": "application/json;charset=UTF-8",
+            "Host": "beijing-gateway-customer.app-prod.bjev.com.cn",
+            "Connection": "Keep-Alive",
+            "Accept-Encoding": "gzip"
+        }
+    }
+    get_uuid() {
+        return 'xxxxxxxx-xxxx-xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+            var r = Math.random() * 16 | 0,
+                v = c == 'x' ? r : (r & 0x3 | 0x8);
+            return v.toString(16);
+        });
     }
 }
 
@@ -341,7 +374,7 @@ async function start() {
  * @returns
  */
 async function checkEnv() {
-    let userCookie = ($.isNode() ? process.env[ckName] : $.getdata(ckName)) || "";
+  let userCookie = ($.isNode() ? process.env[ckName] : $.getdata(ckName)) || "";
     if (userCookie) {
         let e = envSplitor[0];
         for (let o of envSplitor)
