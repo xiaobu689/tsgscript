@@ -1,11 +1,13 @@
 """
 太平洋汽车抽奖
 
+APP：太平洋汽车
 变量名：tpyqc_cookie
-格式： cookie#手机号#openid#devId,
+格式： cookie#手机号#openid#devId
 任意请求头获取cookie, 默认手动提现，如设置自动提现进入我的钱包-瓜分现金-提现-授权微信，抓包openid和devid
+
 定时设置：
-cron: 37 8 * * *
+cron: 37 9 * * *
 const $ = new Env("太平洋汽车");
 """
 import os
@@ -13,6 +15,8 @@ import random
 import time
 import requests
 import json
+
+from sendNotify import send
 
 
 class TPYQCIO():
@@ -112,16 +116,19 @@ class TPYQCIO():
         msg = '开始领取红包......\n'
         print(msg)
         while True:
-            msg = self.receice()
+            msg += self.receice()
             if "领取成功" in msg:
                 print("✅领取成功，退出循环\n")
+                msg += "✅领取成功，退出循环\n"
                 break
             sleep_time = random.randint(15, 45)
             print(f"❌本次领取失败，{sleep_time} 秒后进行下一次尝试......\n")
             time.sleep(sleep_time)
+        return msg
 
     def cashOut(self):
-        print("开始提现......\n")
+        msg = "开始提现......\n"
+        print(msg)
         # 定义URL和请求头
         url = 'https://act1.pcauto.com.cn/discount/api/cash/out'
         headers = {
@@ -149,17 +156,30 @@ class TPYQCIO():
 
         if response_json['code'] == 200:
             if response_json['data']['code'] == 0:
-                print(f'✅提现成功：{response_json["data"]["msg"]}')
+                msg1 = f'✅提现成功：{response_json["data"]["msg"]}'
+                msg += msg1
             elif response_json['data']['code'] == 3:
-                print(f'❌提现失败：余额不足0.3，再攒攒吧')
+                msg2 = f'❌提现失败：余额不足0.3，再攒攒吧'
+                msg += msg2
         else:
-            print(f'❌提现失败：{response_json["msg"]}')
+            msg3 = f'❌提现失败：{response_json["msg"]}'
+            msg += msg3
+
+        return msg
 
     def main(self):
-        self.start_receiving()
+        title = "太平洋汽车每日抽奖"
+        msg1 = self.start_receiving()
         if self.auto_cash_out == 'true':
             time.sleep(random.randint(15, 20))
-            self.cashOut()
+            msg2 = self.cashOut()
+        else:
+            msg2 = f'❌余额不足，先不提现，再攒攒吧！\n'
+            print(msg2)
+
+        # 通知
+        send(title, msg1 + msg2)
+
 
 if __name__ == '__main__':
     env_name = 'tpyqc_cookie'

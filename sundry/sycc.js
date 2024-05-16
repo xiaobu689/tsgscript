@@ -33,30 +33,36 @@ var headers = {
 // 获取用户信息的函数
 function getUserInfo() {
     console.log("---------------------- 开始查询用户信息 ----------------------")
-    // 获取用户信息的URL
-    var userInfoUrl = 'https://admin.shunyi.wenming.city/jeecg-boot/applet/user/userInfo';
+    return new Promise((resolve, reject) => {
+        // 获取用户信息的URL
+        var userInfoUrl = 'https://admin.shunyi.wenming.city/jeecg-boot/applet/user/userInfo';
 
-    // 使用fetch发送GET请求
-    fetch(userInfoUrl, {
-        method: 'GET',
-        headers: headers
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('❌出现了未知错误：' + response.statusText);
-        }
+        // 使用fetch发送GET请求
+        fetch(userInfoUrl, {
+            method: 'GET',
+            headers: headers
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('❌出现了未知错误：' + response.statusText);
+            }
 
-        return response.json();
-    })
-    .then(data => {
-        if (data.success) {
-            console.log(`✅用户ID: ${data.result.id}`)
-            console.log(`✅当前积分: ${data.result.score}`)
-        } else {
-            console.log("❌查询用户信息失败，可能CK已失效：", data.message)
-        }
-    })
-    .catch(error => console.error('❌Error:', error));
+            return response.json();
+        })
+        .then(data => {
+            if (data.success) {
+                console.log(`✅用户ID: ${data.result.id}`)
+                console.log(`✅当前积分: ${data.result.score}`)
+                resolve(data); // 返回用户信息
+            } else {
+                console.log("❌查询用户信息失败，可能CK已失效：", data.message)
+                reject(data.message); // 返回错误信息
+            }
+        })
+        .catch(error => {
+            reject(error); // 返回错误信息
+        });
+    });
 }
 
 function cashout() {
@@ -64,39 +70,32 @@ function cashout() {
     var url = 'https://admin.shunyi.wenming.city/jeecg-boot/applet/award/exchangeAward';
     // 请求体数据
     var body = '{"awardIds":["1788826595521810434"],"phone":"17854279565"}';
-    // 使用fetch发送POST请求
-    fetch(url, {
-        method: 'POST',
-        headers: headers,
-        body: body
-    })
-    .then(response => {
-        if (response.status === 0) {
-        console.log("提现成功");
-      }
-    })
-    .then(data => console.log(data))
-    .catch(error => console.error('出错啦，快看看吧：:', error));
-    fetch(url, {
-        method: 'POST',
-        headers: headers,
-        body: body
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('❌出现了未知错误：' + response.statusText);
-        }
-        return response.json();
-    })
-    .then(data => {
-        if (data.success) {
-            console.log(`✅提现成功， ${data.message}`)
-        } else {
-            console.log(`❌提现失败， ${data.message}`)
-        }
-        console.log(data);
-    })
-    .catch(error => console.error('❌Error:', error));
+    return new Promise((resolve, reject) => {
+        // 使用fetch发送POST请求
+        fetch(url, {
+            method: 'POST',
+            headers: headers,
+            body: body
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('❌出现了未知错误：' + response.statusText);
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data.success) {
+                console.log(`✅提现成功， ${data.message}`)
+                resolve(data); // 返回提现结果
+            } else {
+                console.log(`❌提现失败， ${data.message}`)
+                reject(data.message); // 返回提现失败信息
+            }
+        })
+        .catch(error => {
+            reject(error); // 返回错误信息
+        });
+    });
 }
 
 getUserInfo()
@@ -110,5 +109,6 @@ getUserInfo()
 .catch(error => {
     console.error('Error:', error);
 });
+
 
 

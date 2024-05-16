@@ -1,5 +1,8 @@
 """
 随申行
+
+APP：随申行
+用途：兑换地铁优惠券，上海坐地铁使用
 变量名：ssx_token
 格式： 任意请求头抓 Authorization 值
 定时设置：
@@ -103,7 +106,10 @@ class SuiShenXing():
             msg += f'❌领取失败， cookie可能已失效：{response["errMsg"]}\n'
             print(msg)
 
+        return msg
+
     def task_list(self):
+        msg = ""
         url = 'https://api.shmaas.net/cap/app/queryLowCarbonHome'
         headers = {
             'Host': 'api.shmaas.net',
@@ -142,7 +148,8 @@ class SuiShenXing():
         # print(response)
         if response['errCode'] == 0:
             for i in response['data']['userActivityMessages']:
-                print(f'✅{i["name"]}: {"已完成" if i["finishStatus"] == 1 else "未完成"}')
+                msg1 = f'✅{i["name"]}: {"已完成" if i["finishStatus"] == 1 else "未完成"}\n'
+                print(msg1)
         else:
             msg = f'❌获取任务列表信息失败， cookie可能失效：{response["errMsg"]}'
             print(msg)
@@ -320,13 +327,18 @@ class SuiShenXing():
         print(msg)
 
     def main(self):
-        self.getUserInfo()
-        self.task_list()
+        title = "随申行"
+        msg1 = self.getUserInfo()
+        msg2 = self.task_list()
         self.get_game_info()
         # self.feed()
         # self.query_address()
         # self.receive()
         # self.lottery()
+
+        # 通知
+        send(title, msg)
+
 
 
 if __name__ == '__main__':
