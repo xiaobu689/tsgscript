@@ -97,7 +97,7 @@ getUserInfo()
     if (userInfo.result.score >= 100) {
         return cashout();
     } else {
-        console.log(`❌积分不足, 再攒攒吧！当前积分: {userInfo.result.score}`);
+        console.log(`❌积分不足, 再攒攒吧！`);
     }
 })
 .catch(error => {

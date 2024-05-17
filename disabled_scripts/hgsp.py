@@ -11,6 +11,8 @@ import time
 import os
 import sys
 
+print("This script is disabled.")
+exit(0)
 
 class HgSp():
     VIDEO_F:int = 25 #视频次数
