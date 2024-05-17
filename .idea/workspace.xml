@@ -2,141 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddd6a936-d130-44c7-9d8d-4d16ab3c823e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/todoList.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hellobike.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nwbar.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sundry/ttcy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sundry/yxh.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1广汽传祺js.js" beforeDir="false" afterPath="$PROJECT_DIR$/汽车/1广汽传祺js.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QLScriptPublic/Coca.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QLScriptPublic/Tank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QLScriptPublic/alyp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QLScriptPublic/baitianGame.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QLScriptPublic/bhxcy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QLScriptPublic/bjev.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QLScriptPublic/bnmdhg_wx.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QLScriptPublic/dewuNew.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QLScriptPublic/dfyc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QLScriptPublic/didi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QLScriptPublic/dwnc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QLScriptPublic/dwnc.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QLScriptPublic/hdl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QLScriptPublic/meituan.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QLScriptPublic/mxbc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QLScriptPublic/mys.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QLScriptPublic/qfxsh.js" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/qfxsh.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QLScriptPublic/ql.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QLScriptPublic/sysxc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QLScriptPublic/sysxc.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QLScriptPublic/sysxc_v2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QLScriptPublic/utils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QLScriptPublic/wx_hapi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QLScriptPublic/wx_lccd.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QLScriptPublic/xqz.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QLScriptPublic/ysfqd.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QLScriptPublic/叮当快药.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QLScriptPublic/植白说.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QLScriptPublic/草莓台.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bjqc.js" beforeDir="false" afterPath="$PROJECT_DIR$/汽车/bjqc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csair_checkin.js" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/nfhk.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dddd/pddgy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dddd/pddgys_.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dddd/qimao.js" beforeDir="false" afterPath="$PROJECT_DIR$/七猫/qimao.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dddd/qmxs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dddd/qmxs2.js" beforeDir="false" afterPath="$PROJECT_DIR$/七猫/qmxs2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dddd/qmyd.js" beforeDir="false" afterPath="$PROJECT_DIR$/七猫/qmyd.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dddd/qw.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dddd/raw_02_1676976131-37c2da24c695c42.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dddd/raw_03_1677847654-947dd7b1825865f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dddd/raw_09_酷狗.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dddd/raw_11_adbc8a89ff7ea.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dddd/raw_18_dec30f9c012de.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dddd/raw_21_43b4071b2cd45.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dddd/raw_25_12bc070af249f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dddd/raw_main_500w.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dddd/raw_main_8FE593BFE8AF.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dddd/raw_main_99E882.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dddd/raw_main_B1E5BF98E8BB.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dddd/raw_main_BEE7A9A3E697.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dddd/raw_main_BEE9B4B0E8B4.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dddd/raw_main_KS_CFD.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dddd/raw_main_bc_dyhsb.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dddd/raw_main_bd_jrttnz.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dddd/raw_main_dyjsb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dddd/raw_main_hgsp.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dddd/raw_main_k_wbdh.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dddd/raw_main_ksjsb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ddgy.py" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/ddgy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ddyt.py" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/ddyt.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dfycb.js" beforeDir="false" afterPath="$PROJECT_DIR$/reads/dfycb.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/disabled_scripts/xzb阅读.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/elqj.js" beforeDir="false" afterPath="$PROJECT_DIR$/reads/elqj.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fqxs.js" beforeDir="false" afterPath="$PROJECT_DIR$/reads/fqxs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gjgj.js" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/gjgj.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hgsp.py" beforeDir="false" afterPath="$PROJECT_DIR$/disabled_scripts/hgsp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hqcsh.js" beforeDir="false" afterPath="$PROJECT_DIR$/汽车/hqcsh.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hyjk.js" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/hyjk.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdbean.py" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/jdbean.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfh.js" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/kfh.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfhs.py" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/kfhs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kuake.py" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/kuake.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kww_1212_01.js" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/kww_1212_01.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-qinglong-js/今日南浔.js" beforeDir="false" afterPath="$PROJECT_DIR$/reads/今日南浔.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-qinglong-js/仑传.js" beforeDir="false" afterPath="$PROJECT_DIR$/reads/仑传.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-qinglong-js/南湖声音.js" beforeDir="false" afterPath="$PROJECT_DIR$/reads/南湖声音.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-qinglong-js/可乐读书.js" beforeDir="false" afterPath="$PROJECT_DIR$/reads/可乐读书.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-qinglong-js/小阅阅.py" beforeDir="false" afterPath="$PROJECT_DIR$/reads/小阅阅.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-qinglong-js/悦临平.js" beforeDir="false" afterPath="$PROJECT_DIR$/reads/悦临平.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-qinglong-js/星火学苑.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-qinglong-js/植白说.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-qinglong-js/植白说.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-qinglong-js/洪德堂扫活动.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-qinglong-js/百观.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-qinglong-js/科技工作者之家.js" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/kjgzzzj.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-qinglong-js/草莓台.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-qinglong-js/荷花博物馆.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-qinglong-js/鱼儿阅读.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-qinglong-js/鸿德堂.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nzqc.js" beforeDir="false" afterPath="$PROJECT_DIR$/汽车/nzqc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qls/chinaliantong.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qls/cmcc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qls/fqxs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qls/jrtt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qls/kgyy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qls/qimaoxs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qls/七猫抽奖领宝箱.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlttt/public/多多果园.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlttt/public/抖音极速.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlttt/public/淘小说.js" beforeDir="false" afterPath="$PROJECT_DIR$/reads/淘小说.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlttt/public/番茄免费小说.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlttt/public/科技玩家.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlttt/public/芒果果园.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlttt/public/苏泊尔.js" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/苏泊尔.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlttt/public/读特.js" beforeDir="false" afterPath="$PROJECT_DIR$/reads/读特.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlttt/public/起飞线生活.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlttt/public/趣味阅读.js" beforeDir="false" afterPath="$PROJECT_DIR$/reads/趣味阅读.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlttt/public/趣看365.js" beforeDir="false" afterPath="$PROJECT_DIR$/reads/趣看365.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qmgold.js" beforeDir="false" afterPath="$PROJECT_DIR$/七猫/qmgold.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sfsy.py" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/sfsy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sfsyV2.js" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/sfsyV2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sign_template.py" beforeDir="false" afterPath="$PROJECT_DIR$/sendNotify.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smartcar.js" beforeDir="false" afterPath="$PROJECT_DIR$/汽车/smartcar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ssx.py" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/ssx.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sycc.js" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/sycc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tpt.js" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/tpt.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tpyqc.py" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/tpyqc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tyqh.py" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/tyqh.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tyqh_jk.py" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/tyqh_jk.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wx_jdyd.js" beforeDir="false" afterPath="$PROJECT_DIR$/reads/wx_jdyd.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wx_yd.js" beforeDir="false" afterPath="$PROJECT_DIR$/reads/wx_yd.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wxgc.js" beforeDir="false" afterPath="$PROJECT_DIR$/reads/wxgc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xijiu.js" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/xijiu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xinxi.js" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/xinxi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ydyp.py" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/ydyp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yhsh.js" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/yhsh.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yhsh.py" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/yhsh.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ysf.js" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/ysf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zajk.js" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/zajk.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zgdx.js" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/zgdx.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zglt.js" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/zglt.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zxsc.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/鸿星尔克.js" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/鸿星尔克.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QL/ksgy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QLScriptPublic/yidongyunpan.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/disabled_scripts/AITO.py" beforeDir="false" afterPath="$PROJECT_DIR$/disabled_scripts/AITO.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/qls/ksgy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sundry/ssx.py" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/ssx.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sundry/sycc.js" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/sycc.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,6 +31,16 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/Documents/WeChat Files/wxid_u8qw5xouz0cf22/FileStorage/File/2024-05/insert_mul.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/QLScriptPublic/suboer.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/QLScriptPublic/sytt.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/QLScriptPublic/wx_gjjkpro.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/QLScriptPublic/wx_midea.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/QLScriptPublic/wx_xlxyh.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/QLScriptPublic/xbox.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/QLScriptPublic/xinxi.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/QLScriptPublic/yuebai.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/QLScriptPublic/太平洋知科技.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/sundry/ssx.py" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -185,57 +71,15 @@
       <recent name="D:\workspace\src\tsgscript\dddd" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\workspace\src\tsgscript\reads" />
       <recent name="D:\workspace\src\tsgscript\sundry" />
+      <recent name="D:\workspace\src\tsgscript\reads" />
       <recent name="D:\workspace\src\tsgscript\七猫" />
       <recent name="D:\workspace\src\tsgscript\cars" />
       <recent name="D:\workspace\src\tsgscript\car" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.raw_main_k_wbdh">
-    <configuration name="insert_mul" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="tsgscript" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Documents/WeChat Files/wxid_u8qw5xouz0cf22/FileStorage/File/2024-05" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/Documents/WeChat Files/wxid_u8qw5xouz0cf22/FileStorage/File/2024-05/insert_mul.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="raw_main_k_wbdh" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="tsgscript" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/dddd" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dddd/raw_main_k_wbdh.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="sign_template" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.nwbar">
+    <configuration name="11111" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="tsgscript" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -247,7 +91,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sign_template.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/11111.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -256,7 +100,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ssx" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="nwbar" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="tsgscript" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -268,7 +112,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="D:\workspace\src\tsgscript\sundry\ssx.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/nwbar.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -277,7 +121,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="tpyqccj" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="ttcy" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="tsgscript" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -285,11 +129,53 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sundry" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tpyqccj.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sundry/ttcy.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="yxh (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="tsgscript" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sundry" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sundry/yxh.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="yxh" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="tsgscript" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sundry" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="D:\workspace\src\tsgscript\sundry\yxh.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -300,11 +186,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.raw_main_k_wbdh" />
-        <item itemvalue="Python.sign_template" />
-        <item itemvalue="Python.insert_mul" />
-        <item itemvalue="Python.ssx" />
-        <item itemvalue="Python.tpyqccj" />
+        <item itemvalue="Python.nwbar" />
+        <item itemvalue="Python.11111" />
+        <item itemvalue="Python.ttcy" />
+        <item itemvalue="Python.yxh (1)" />
+        <item itemvalue="Python.yxh.js" />
       </list>
     </recent_temporary>
   </component>
@@ -337,6 +223,11 @@
           <url>file://$PROJECT_DIR$/dddd/raw_main_k_wbdh.py</url>
           <line>90</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/sundry/ttcy.py</url>
+          <line>24</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

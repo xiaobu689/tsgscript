@@ -9,6 +9,8 @@ import os
 
 import requests
 # from sign.notify import notify_pushPlus
+print("This script is disabled.")
+exit(0)
 
 
 class AITO:

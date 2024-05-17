@@ -17,6 +17,8 @@
 * 奖励：积攒奖励金可换手机话费重置抵用券
 
 */
+console.log("This script is disabled.");
+process.exit(0);
 //&
 const axios = require('axios');
 

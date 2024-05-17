@@ -8,6 +8,9 @@
  * scriptVersionNow = "0.0.3";
  */
 
+console.log("This script is disabled.");
+process.exit(0);
+
 const $ = new Env("硬声");
 const ckName = "yingsheng_data";
 const Notify = 1; //0为关闭通知,1为打开通知,默认为1
