@@ -501,34 +501,33 @@ class TTCY():
 
         msg2 = self.task_list()
         msg3 = self.get_game_info()
-        # time.sleep(random.randint(7, 15))
-        #
-        # msg4 = self.feed()
-        # time.sleep(random.randint(10, 20))
-        #
-        # self.query_address()
-        # msg5 = self.finish_query_address()
-        # time.sleep(random.randint(5, 10))
-        #
-        # msg6 = self.sign()
-        # time.sleep(random.randint(5, 15))
-        # msg7 = self.lottery()
-        # time.sleep(random.randint(5, 15))
-        #
-        # msg8 = self.receive()
-        #
-        # msg = msg1 + msg2 + msg3 + msg4 + msg5 + msg6 + msg7 + msg8
-        #
-        # # 通知
-        # send(title, msg)
+        time.sleep(random.randint(7, 15))
+
+        msg4 = self.feed()
+        time.sleep(random.randint(10, 20))
+
+        self.query_address()
+        msg5 = self.finish_query_address()
+        time.sleep(random.randint(5, 10))
+
+        msg6 = self.sign()
+        time.sleep(random.randint(5, 15))
+        msg7 = self.lottery()
+        time.sleep(random.randint(5, 15))
+
+        msg8 = self.receive()
+
+        msg = msg1 + msg2 + msg3 + msg4 + msg5 + msg6 + msg7 + msg8
+
+        # 通知
+        send(title, msg)
 
 
 if __name__ == '__main__':
     env_name = 'SSX_COOKIE'
     cookie = os.getenv(env_name)
-    cookie = 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1aWQiOiJDYjE4NDM3ZGM3ZjZiNDVjMTgxOWMyNWQ5OGJmOGE0ZmMiLCJkZXZpY2VJZCI6IjYzM0VCNDFENUVFQzQxQjFCQTkwRTk0QzBBMzdEMUQ2IiwiZXhwaXJlSW4iOjE3MzEwMjg4Nzg3NDcsImNyZWF0ZVRpbWUiOjE3MTU0NzY4Nzg3NDcsInBsYXRmb3JtQ29kZSI6ImlvcyIsImFwcElkIjoibWFhc19jYXIiLCJjaGFubmVsQ29kZSI6Im1hYXMiLCJhY2NvdW50TmFtZSI6IjE3OCoqKio5NTY1IiwiYWNjb3VudFR5cGUiOiIxIiwicHJvZHVjdElkIjo1LCJvcGVuSWQiOiIiLCJlayI6IiIsImNsaWVudElkIjoiMTUwMTQ4OTYxNjcwMzA3MDIwOCIsInVpZFR5cGUiOjEsInRhZyI6Mn0.LG5oHBgdxQul7YgrJHOyf7FLlIQ39R_hLmz_TGaUfKHyhIy2FOgLluQ5KD17gwBg_QqdlIstxr3Gjioye3D1kk8ZfuedOiojaiM-531VbfhwsEdlPeKL4Y0flUswYWgukjgQ0l-dXLBLV6FG8ytywYC3bBhUS3_J3RGmZctFvyk#Cb18437dc7f6b45c1819c25d98bf8a4fc'
-    # if not cookie:
-    #     print(f'⛔️未获取到ck变量：请检查变量 {env_name} 是否填写')
-    #     exit(0)
+    if not cookie:
+        print(f'⛔️未获取到ck变量：请检查变量 {env_name} 是否填写')
+        exit(0)
 
     TTCY(cookie).main()
