@@ -105,7 +105,6 @@ class UserInfo {
             str = `${method}${path}ice-auth-appkey:5795393720ice-auth-timestamp:${timestamp}json=${body}${params}${key}`
         } else {
             str = `${method}${path}ice-auth-appkey:5795393720ice-auth-timestamp:${timestamp}${params}${key}`
-
         }
         const sign = this.sha256(encodeURIComponent(str))
         return {
@@ -143,9 +142,9 @@ class UserInfo {
             }
             options.headers = this.get_headers(options.method, options.url, options.body)
             let { body: result } = await httpRequest(options);
-            //console.log(options);
+            console.log(options);
             result = JSON.parse(result);
-            //console.log(result);
+            console.log(result);
             if (result.code == 0) {
                 $.log(`✅[${options.fn}]成功🎉`)
             } else {
@@ -170,7 +169,7 @@ class UserInfo {
             result = JSON.parse(result);
             console.log("222222222222222",result);
             if (result.code == "0") {
-                //console.log(`✅账号[${this.index}]  欢迎用户: ${result.errcode}🎉`);
+                console.log(`✅账号[${this.index}]  欢迎用户: ${result.errcode}🎉`);
                 $.log(`✅[${result.data.name}][${result.data.code}][${result.data.id}]🎉`)
                 this.ckStatus = true;
             } else {

@@ -8,7 +8,7 @@
 
 定时设置：每天一次就行，时间随意
 cron: 33 8 * * *
-const $ = new Env("天天冲鸭");
+const $ = new Env("浓五的酒馆");
 """
 import os
 import random
@@ -19,15 +19,15 @@ from sendNotify import send
 
 
 class TTCY():
-    def __init__(self):
-        self.cookie = ''
+    def __init__(self, token):
+        self.token = token
 
     def nwbar_sign(self):
         headers = {
             'authority': 'stdcrm.dtmiller.com',
             'accept': '*/*',
             'accept-language': 'zh-CN,zh;q=0.9',
-            'authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJtaW5pYXBwX2N1c3RvbWVyIiwic3ViIjoib0JMbkk1ZnllSnMzWU5WY2hpeFZWdXRCaHlETSIsImV4cCI6MTcxNjAyMzgxOH0.CWd7MeG-0Cl0P9Z-VpuAweeWxMY5Y82rWvtzEswuz9snbD8r-icU_Z3T8A6jfAsrdpassy7JLt7S_0hu-guQEg',
+            'authorization': self.token,
             'content-type': 'application/json',
             'referer': 'https://servicewechat.com/wxed3cf95a14b58a26/199/page-frame.html',
             'sec-fetch-dest': 'empty',
@@ -43,9 +43,18 @@ class TTCY():
 
         url = 'https://stdcrm.dtmiller.com/scrm-promotion-service/promotion/sign/today'
 
-        response = requests.get(url, params=params, headers=headers).json()
-        print(response)
+        response = requests.get(url, params=params, headers=headers, verify=False).json()
+        # print(response)
+        msg = '--------------- 开始签到 ---------------\n'
+        if response['code'] == 0:
+            score = response['data']['score']
+            msg += f'✅签到成功，获得{score}, 已签到{response["data"]["signDays"]}\n'
+            print(msg)
+        else:
+            msg += f'❌签到失败，{response["msg"]}'
+            print(msg)
 
+        return msg
 
     def main(self):
         self.nwbar_sign()
@@ -57,9 +66,9 @@ class TTCY():
 if __name__ == '__main__':
     env_name = 'nwbar'
     token = os.getenv(env_name)
+    token = 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJtaW5pYXBwX2N1c3RvbWVyIiwic3ViIjoib0JMbkk1ZnllSnMzWU5WY2hpeFZWdXRCaHlETSIsImV4cCI6MTcxNjAyMzgxOH0.CWd7MeG-0Cl0P9Z-VpuAweeWxMY5Y82rWvtzEswuz9snbD8r-icU_Z3T8A6jfAsrdpassy7JLt7S_0hu-guQEg'
     if not token:
         print(f'⛔️未获取到ck变量：请检查变量 {env_name} 是否填写')
         exit(0)
 
-    TTCY().main()
-
+    TTCY(token).main()

@@ -84,20 +84,21 @@ class TTCY():
         json_data = {
             'data': {
                 'dataVerify': '0270921b9953a4c2f23e21122c0b4192a80cb3008d90356c91c8cf5206e52791e14af097fa72d034d8348735f4d836fd265e53f0a4b5e053e38aeeab11f9813549497160277c07843f3dc6dd6e472150d46b6def044f0b61b21813c0ce11d711854552df20019b458e25bf2ca982ccb65ddd14a19eb7c6f24264beb1a600b689c247213c8bb420f7c0873a148705de75a884d1887bb1d63dc87525516eb6b20bdac73a1da578fbce814ceff9111f7d1edaaa8763a29493836b495361780c3c7452cb4e374ac5a67baa907de27c5f14728d1cf0b979c2c0911c3d5143196e97ce2463604dcefba4e8484da42a3413b970d4d211786613e5da4ffa798d9b16259b',
-                'pubKeyHash': '06c45a2106c731de3b153401bd0c4f45',
-                'deviceChannel': 'WECHAT',
-                'businessChannel': 'miniprogram',
-                'channelCode': 'wechat',
+                'pubKeyHash': '06c45a2106c731de3b153401bd0c4f45',  # 公共密钥，固定值
+                'deviceChannel': 'WECHAT',  # 固定值
+                'businessChannel': 'miniprogram',  # 固定值
+                'channelCode': 'wechat',  # 固定值
             },
             'tid': 'cd67071a-e788-4d26-b7a4-03fccfe7a14a',
         }
 
         response = requests.post('https://member-gateway.yuexiu.com/gateway/memberTask/app/sign/signin',
                                  headers=headers, json=json_data).json()
+        print(response)
         if response['code'] == 'S0A00000':
             print('✅签到成功')
         else:
-            print('签到失败: ', response['msg']) # 签到失败:  请求已失效
+            print('签到失败: ', response['msg'])  # 签到失败:  请求已失效
 
     def task_list(self):
         headers = {
@@ -183,11 +184,11 @@ class TTCY():
             }
 
             params = {
-                'master_id': 'samaster-b40de697-2bca-4afa-9881-f24b7273c97c',
-                'site_id': 'app.yuexiu',
-                'wx_from': '4763271958715100',
-                'wx_from_enc': 'dc1535817TkRjMk16STNNVGsxT0RjeE5URXdNQT09',
-                '__d': '1715931968851', # 毫秒时间戳
+                'master_id': 'samaster-b40de697-2bca-4afa-9881-f24b7273c97c',   # 固定值
+                'site_id': 'app.yuexiu',  # 固定值
+                'wx_from': '4763271958715100',  # 固定值
+                'wx_from_enc': 'dc1535817TkRjMk16STNNVGsxT0RjeE5URXdNQT09',  # 固定值
+                '__d': '1715931968851',  # 当前时间毫秒时间戳
             }
 
             response = requests.get(
@@ -198,7 +199,7 @@ class TTCY():
             ).json()
             print(response)
             if response['errcode'] == 0:
-                msg = f'✅抽奖结果：{response["data"]["msg"]}, 奖品：{response["data"]["prize"]["name"]}\n'
+                msg = f'✅抽奖结果：{response["data"]["errmsg"]}\n'
                 print(msg)
             else:
                 print('❌抽奖失败: ', response['errmsg'])

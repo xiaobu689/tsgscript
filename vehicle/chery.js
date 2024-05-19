@@ -104,8 +104,8 @@ class UserInfo {
 
             },
                 result = await httpRequest(options);
-            //console.log(options);
-            //console.log(result);
+            console.log(options);
+            console.log(result);
             if (result.status == 200) {
                 $.DoubleLog(`✅账号[${this.index}]  【签到】[${result.message}]🎉`);
             } else {

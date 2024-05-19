@@ -3,7 +3,54 @@
   <component name="ChangeListManager">
     <list default="true" id="ddd6a936-d130-44c7-9d8d-4d16ab3c823e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sundry/sycc.js" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/sycc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QL/app_dmdd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QL/cmcc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QL/dwjk.js" beforeDir="false" afterPath="$PROJECT_DIR$/disabled_scripts/dwjk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QL/dygy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QL/fqxs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QL/gylm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QL/jrtt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QL/kgyy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QL/qdxw.js" beforeDir="false" afterPath="$PROJECT_DIR$/qdxw.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QL/qimaoxs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QL/weibo_checkin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QL/woniuyuedu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QL/wx_kkjyd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QL/wxyd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QL/wxyd1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QL/xab.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QL/xiangjiaoshipin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QL/zssq.js" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/zssq.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QL/云闪付签到.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QL/小阅阅.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QL/拼多多果园.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QL/火锅视频.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QLScriptPublic/akrd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QLScriptPublic/chery.js" beforeDir="false" afterPath="$PROJECT_DIR$/汽车/chery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QLScriptPublic/cheryev.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QLScriptPublic/qbd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QLScriptPublic/sfsy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QLScriptPublic/sfsyV2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QLScriptPublic/smart汽车+.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QLScriptPublic/wx_ziwi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QLScriptPublic/xinxi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellobike.py" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/hellobike.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nwbar.py" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/nwbar.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/qls/app_dmdd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/qls/dwjk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/qls/gylm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/qls/qdxw.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/qls/woniuyuedu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/qls/wx_kkjyd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/qls/wxyd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/qls/wxyd1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/qls/xiangjiaoshipin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/qls/zssq.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sundry/ssx.py" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/ssx.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sundry/tpyqc.py" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/tpyqc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sundry/yxh.py" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/yxh.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todoList.py" beforeDir="false" afterPath="$PROJECT_DIR$/todoList.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/汽车/bjqc.js" beforeDir="false" afterPath="$PROJECT_DIR$/汽车/bjqc.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +75,6 @@
     <setting file="file://$PROJECT_DIR$/QLScriptPublic/wx_midea.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/QLScriptPublic/wx_xlxyh.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/QLScriptPublic/xbox.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/QLScriptPublic/xinxi.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/QLScriptPublic/yuebai.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/QLScriptPublic/太平洋知科技.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/sundry/ssx.py" root0="FORCE_HIGHLIGHTING" />
@@ -44,15 +90,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "D:/workspace/src/tsgscript/sundry"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/workspace/src/tsgscript/sundry&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\workspace\src\tsgscript\sundry" />
@@ -62,35 +108,14 @@
       <recent name="D:\workspace\src\tsgscript\dddd" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\workspace\src\tsgscript" />
+      <recent name="D:\workspace\src\tsgscript\disabled_scripts" />
       <recent name="D:\workspace\src\tsgscript\sundry" />
+      <recent name="D:\workspace\src\tsgscript\汽车" />
       <recent name="D:\workspace\src\tsgscript\reads" />
-      <recent name="D:\workspace\src\tsgscript\七猫" />
-      <recent name="D:\workspace\src\tsgscript\cars" />
-      <recent name="D:\workspace\src\tsgscript\car" />
     </key>
   </component>
   <component name="RunManager" selected="Python.nwbar">
-    <configuration name="11111" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="tsgscript" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/11111.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="nwbar" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="tsgscript" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -103,7 +128,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/nwbar.py" />
+      <option name="SCRIPT_NAME" value="D:\workspace\src\tsgscript\sundry\nwbar.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -112,7 +137,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ttcy" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="ssx" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="tsgscript" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -124,7 +149,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sundry/ttcy.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sundry/ssx.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -133,7 +158,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="yxh (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="testi876i.js" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="tsgscript" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="D:\workspace\src\tsgscript\testi876i.js" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tpyqc" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="tsgscript" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -145,7 +191,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sundry/yxh.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sundry/tpyqc.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -166,7 +212,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="D:\workspace\src\tsgscript\sundry\yxh.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sundry/yxh.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -178,10 +224,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.nwbar" />
-        <item itemvalue="Python.11111" />
-        <item itemvalue="Python.ttcy" />
-        <item itemvalue="Python.yxh (1)" />
-        <item itemvalue="Python.yxh.js" />
+        <item itemvalue="Python.tpyqc" />
+        <item itemvalue="Python.testi876i.js" />
+        <item itemvalue="Python.yxh" />
+        <item itemvalue="Python.ssx" />
       </list>
     </recent_temporary>
   </component>
@@ -219,6 +265,11 @@
           <url>file://$PROJECT_DIR$/sundry/ttcy.py</url>
           <line>24</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/sundry/yxh.py</url>
+          <line>85</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

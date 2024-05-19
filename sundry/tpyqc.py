@@ -153,7 +153,6 @@ class TPYQCIO():
         }
         response = requests.post(url, headers=headers, json=data)
         response_json = response.json()
-
         if response_json['code'] == 200:
             if response_json['data']['code'] == 0:
                 msg1 = f'✅提现成功：{response_json["data"]["msg"]}'
@@ -170,13 +169,14 @@ class TPYQCIO():
     def main(self):
         title = "太平洋汽车每日抽奖"
         msg1 = self.start_receiving()
-        if self.auto_cash_out == 'true':
+        if self.auto_cash_out:
             time.sleep(random.randint(15, 20))
             msg2 = self.cashOut()
         else:
             msg2 = f'❌余额不足，先不提现，再攒攒吧！\n'
             print(msg2)
 
+        print(msg1+msg2)
         # 通知
         send(title, msg1 + msg2)
 
