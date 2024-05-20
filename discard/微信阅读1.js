@@ -12,6 +12,9 @@
 
 */
 
+print("This script is disabled.")
+exit(0)
+
 const $ = new Env("微信简单阅读");
 const notify = $.isNode() ? require('./sendNotify') : '';
 let envSplitor = ['@', '\n']

@@ -9,6 +9,8 @@
 会自动提现
 */
 
+
+
 const $ = new Env("微信阅读");
 const notify = $.isNode() ? require('./sendNotify') : '';
 let envSplitor = ['@', '\n']

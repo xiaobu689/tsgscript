@@ -5,6 +5,10 @@
 hb3渠道的 请自行更改第33、69、120行的url ，将hb2改成hb3
 真不理解为什么外面卖18r还有人被圈，就简单的抓包重发，甚至简单到没有加任何验证，我十分钟不到就把脚本写完了
 */
+
+print("This script is disabled.")
+exit(0)
+
 const uid="xxxxx"
 const Authorization="xxxxxxxxxx"
 const $ = new Env('大为健康-薅羊毛薅老头低保版');

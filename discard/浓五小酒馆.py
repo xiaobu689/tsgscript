@@ -1,7 +1,7 @@
 """
 浓五的酒馆
 
-路径：浓五的酒馆小程序
+路径：浓五小酒馆小程序
 用途：签到领积分，积分兑换话费，仅支持电信手机号
 变量名：nwbar
 格式： 任意请求头抓 Authorization 值
@@ -11,12 +11,10 @@ cron: 33 8 * * *
 const $ = new Env("浓五的酒馆");
 """
 import os
-import random
-import time
 import requests
-from datetime import datetime
-from sendNotify import send
 
+print("This script is disabled.")
+exit(0)
 
 class TTCY():
     def __init__(self, token):

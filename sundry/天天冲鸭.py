@@ -10,12 +10,7 @@
 cron: 33 8 * * *
 const $ = new Env("天天冲鸭");
 """
-import os
-import random
-import time
 import requests
-from datetime import datetime
-from sendNotify import send
 
 
 class TTCY():

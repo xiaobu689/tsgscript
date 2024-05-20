@@ -17,7 +17,6 @@ import os
 import random
 import re
 import time
-from os import path
 
 import requests
 

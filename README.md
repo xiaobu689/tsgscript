@@ -1,23 +1,6 @@
 # tsgqinglong
 青龙自用库
 
-- [x] 目前有
-- [x] ddgy：滴滴果园
-- [x] ddyt: 叮咚鱼塘
-- [x] jdbean: JD签到
-- [x] kuake: 夸克签到
-- [x] ydyp: 移动云盘
-- [x] zgdx: 中国电信
-- [x] smzdm: 什么值得买
-- [x] dfycb: 东方烟草报
-- [x] kfh: 卡夫亨
-- [x] tpt: 太平通
-- [x] wxgc: 无锡观察
-- [x] zajk: 众安健康
-- [x] zjy: 广汽传祺【待定】
-- [x] ydyp: 七猫小说【待定】
-- [x] ydyp: 顺义创城【待定】
-
 ### 青龙订阅任务
 ```
 名称：自用

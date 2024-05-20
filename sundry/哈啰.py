@@ -11,17 +11,15 @@ cron: 26 11 * * *
 const $ = new Env("哈罗单车");
 """
 import os
-import random
-import time
+
 import requests
-from datetime import datetime
-from sendNotify import send
 
 
 class TTCY():
-    def __init__(self):
-        self.cookie = ''
+    def __init__(self, token):
+        self.token = token
 
+    # 签到
     def hello_sign(self):
         headers = {
             'Host': 'api.hellobike.com',
@@ -45,7 +43,7 @@ class TTCY():
             'platform': 4,
             'version': '6.62.5',
             'action': 'common.welfare.signAndRecommend',
-            'token': '1031e52fbecf434194e336918cd460a7',
+            'token': self.token,
         }
 
         url = 'https://api.hellobike.com/api?common.welfare.signAndRecommend'
@@ -59,6 +57,8 @@ class TTCY():
         print(msg)
         return msg
 
+    # 查询奖励金
+
     def main(self):
         self.hello_sign()
 
@@ -67,11 +67,10 @@ class TTCY():
 
 
 if __name__ == '__main__':
-    # env_name = 'TTCY_COOKIE'
-    # cookie = os.getenv(env_name)
-    # # if not cookie:
-    # #     print(f'⛔️未获取到ck变量：请检查变量 {env_name} 是否填写')
-    # #     exit(0)
-    token = ''
+    env_name = 'HELLO_TOKEN'
+    token = os.getenv(env_name)
+    if not token:
+        print(f'⛔️未获取到token变量：请检查变量 {env_name} 是否填写')
+        exit(0)
 
-    TTCY().main()
+    TTCY(token).main()

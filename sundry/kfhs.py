@@ -10,17 +10,14 @@ import time
 from datetime import date, datetime
 
 import requests
-from requests.packages.urllib3.exceptions import InsecureRequestWarning
-# import CHERWIN_TOOLS
-# 禁用安全请求警告
-requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
+
 if os.path.isfile('DEV_ENV.py'):
     import DEV_ENV
-if os.path.isfile('notify.py'):
-    from notify import send
-    print("加载通知服务成功！")
-else:
-    print("加载通知服务失败!")
+# if os.path.isfile('notify.py'):
+#     from notify import send
+#     print("加载通知服务成功！")
+# else:
+#     print("加载通知服务失败!")
 send_msg = ''
 one_msg=''
 def Log(cont=''):
@@ -351,4 +348,4 @@ export SCRIPT_UPDATE = 'False' 关闭脚本自动更新，默认开启
         for index, infos in enumerate(tokens):
             run_result = RUN(infos, index).help()
             if not run_result: continue
-        if send: send(f'{APP_NAME}挂机通知', send_msg + TIPS_HTML)
+        # if send: send(f'{APP_NAME}挂机通知', send_msg + TIPS_HTML)

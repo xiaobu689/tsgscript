@@ -1,14 +1,14 @@
 """
-天天冲鸭
+随申行
 
-路径：ZFB搜索 “天天冲鸭”
-用途：签到领积分，积分兑换话费，仅支持电信手机号
-变量名：ttcy_token
+路径：随申行APP
+用途：签到、养宠物攒兜豆，兑换地铁优惠券
+变量名：SSX_COOKIE
 格式： 任意请求头抓 Authorization 值
 
 定时设置：每天一次就行，时间随意
 cron: 33 8 * * *
-const $ = new Env("天天冲鸭");
+const $ = new Env("随申行");
 """
 import os
 import random
@@ -18,7 +18,7 @@ from datetime import datetime
 from sendNotify import send
 
 
-class TTCY():
+class SSX():
     def __init__(self, cookie):
         parts = cookie.split('#')
         self.cookie = parts[0]
@@ -530,4 +530,4 @@ if __name__ == '__main__':
         print(f'⛔️未获取到ck变量：请检查变量 {env_name} 是否填写')
         exit(0)
 
-    TTCY(cookie).main()
+    SSX(cookie).main()

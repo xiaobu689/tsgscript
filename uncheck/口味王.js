@@ -3,7 +3,7 @@
  * 项目类型：微信小程序
  * 项目名称：口味王
  * 项目抓包：抓tls-xw.mengniu.cn下的memberId & memberUnionid填入变量
- * 项目变量：lekebo_kww_Cookie
+ * 项目变量：kww_Cookie
  * 项目定时：每40分钟运行一次
  * cron: 0 40 0 * * *
  * github仓库：https://github.com/qq274023/lekebo/
@@ -35,7 +35,7 @@ let request = require("request");
 request = request.defaults({jar: true});
 const {log} = console;
 let scriptVersionLatest = "";
-let UserCookie = ($.isNode() ? process.env.lekebo_kww_Cookie : $.getdata('lekebo_kww_Cookie')) || '';
+let UserCookie = ($.isNode() ? process.env.kww_Cookie : $.getdata('kww_Cookie')) || '';
 let UserCookieArr = [];
 let data = '';
 let msg =``;
@@ -1611,7 +1611,7 @@ async function Envs() {
             UserCookieArr.push(UserCookie);
         }
     } else {
-        console.log(`\n 乐客播提示：系统变量未填写 lekebo_kww_Cookie`)
+        console.log(`\n 乐客播提示：系统变量未填写 kww_Cookie`)
         return;
     }
     return true;

@@ -12,11 +12,7 @@ cron: 26 11 * * *
 const $ = new Env("哈罗单车");
 """
 import os
-import random
-import time
 import requests
-from datetime import datetime
-from sendNotify import send
 
 
 class TTCY():
