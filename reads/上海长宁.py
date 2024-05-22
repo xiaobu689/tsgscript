@@ -9,17 +9,24 @@ const $ = new Env("上海长宁");
 """
 import os
 import random
+import re
 import time
 import requests
+from bs4 import BeautifulSoup
 from urllib3.exceptions import InsecureRequestWarning, InsecurePlatformWarning
+
+from common import qianwen_messages, basic_news_question
+
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 requests.packages.urllib3.disable_warnings(InsecurePlatformWarning)
+
 
 class SHCN():
     name = "上海长宁"
 
-    def __init__(self, token):
-        self.token = token
+    def __init__(self, tokenStr):
+        self.token = tokenStr.split('#')[0]
+        self.isComment = tokenStr.split('#')[1]
         self.verify = False
         self.headers = {
             'Host': 'cnapi.shmedia.tech',
@@ -102,14 +109,18 @@ class SHCN():
         url = 'https://cnapi.shmedia.tech/media-basic-port/api/app/common/count/usage/inc'
         response = requests.post(url, headers=self.headers, json=json_data, verify=False).json()
 
-    def article_read(self, id):
+    def article_content(self, id):
         json_data = {'id': id}
         url = 'https://cnapi.shmedia.tech/media-basic-port/api/app/news/content/get'
         response = requests.post(url, headers=self.headers, json=json_data, verify=False).json()
+        return response
+
+    def article_read(self, id):
+        response = self.article_content(id)
         if response['code'] == 0:
             self.article_read_points_add()
             self.article_count_usage_desc(id)
-            print(f'✅文章{response["data"]["id"]} 阅读成功')
+            print(f'✅文章阅读成功')
         else:
             print(f'❌阅读失败，{response}')
 
@@ -118,7 +129,7 @@ class SHCN():
         url = 'https://cnapi.shmedia.tech/media-basic-port/api/app/news/content/favor'
         response = requests.post(url, headers=self.headers, json=json_data, verify=False).json()
         if response['code'] == 0:
-            print(f'✅文章{response["data"]["id"]} 收藏成功')
+            print(f'✅文章收藏成功')
         else:
             print(f'❌收藏失败，{response}')
 
@@ -127,18 +138,55 @@ class SHCN():
         url = 'https://cnapi.shmedia.tech/media-basic-port/api/app/points/share/add'
         response = requests.post(url, headers=self.headers, json=json_data, verify=False).json()
         if response['code'] == 0:
-            print(f'✅文章{id} 分享成功')
+            print(f'✅文章分享成功')
         else:
-            print(f'❌分享失败，{response}')
+            print(f'❌文章分享失败，{response}')
 
     def video_view_task(self):
         json_data = {}
         url = 'https://cnapi.shmedia.tech/media-basic-port/api/app/points/video/add'
         response = requests.post(url, headers=self.headers, json=json_data, verify=self.verify).json()
         if response['code'] == 0:
-            print(f'✅一条视频已经看完啦!')
+            print(f'✅看片儿完成+1')
         else:
-            print(f'❌视频观看失败：{response}')
+            print(f'❌看片儿失败：{response}')
+
+    def get_gpt_comment(self, id):
+        article_concent = ''
+        response = self.article_content(id)
+        comment = ''
+        commentCount = 0
+        if response['code'] == 0:
+            commentCount = response["data"]["count"]["commentCount"]
+            if commentCount <= 0:
+                content = response["data"]["txt"]
+                soup = BeautifulSoup(content, 'html.parser')
+                content_text = soup.get_text()
+                message = qianwen_messages(basic_news_question, content_text)
+                comment = message
+
+        return comment
+
+    def article_comment_add(self, id, content):
+        json_data = {
+            'displayResources': [],
+            'content': content,
+            'targetType': 'content',
+            'targetId': id,
+        }
+        url = 'https://cnapi.shmedia.tech/media-basic-port/api/app/common/comment/add'
+        response = requests.post(url, headers=self.headers, json=json_data).json()
+        if response["code"] == 0:
+            print(f'✅文章评论成功，评论内容：{content}')
+        else:
+            print(f'❌文章评论失败，{response}')
+
+    def article_comment_task(self, id):
+        comment = self.get_gpt_comment(id)
+        if comment == '':
+            print(f'😢未知错误或者文章可能评论过，算了吧，下一个')
+        else:
+            self.article_comment_add(id, comment)
 
     def gift_list(self):
         # TODO
@@ -152,15 +200,22 @@ class SHCN():
         self.task_list()
         counter = 0
         article_list = self.article_list()
+        # print(article_list)
         for i in article_list:
-            article_id = random.choice(article_list)["id"]
-            print(f'🐹随机抓取到文章: {article_id}，开始完成任务......')
-            if counter >= 10:
+            if counter > 12:
                 break
+            article_id = random.choice(article_list)["id"]
+            print('--------------------------------------------------------------------')
+            print(f'🐹随机抓取到一篇文章: {article_id}，开始做任务......')
             self.article_read(article_id)
-            time.sleep(random.randint(20, 30))
+            time.sleep(random.randint(30, 60))
+            self.article_comment_task(article_id)
+            time.sleep(random.randint(10, 20))
             self.article_share(article_id)
             time.sleep(random.randint(10, 18))
+            if self.isComment == 1:
+                self.article_comment_task()
+                time.sleep(random.randint(5, 10))
             if counter <= 5:
                 self.article_favor(article_id)
                 time.sleep(random.randint(10, 20))
@@ -175,9 +230,9 @@ class SHCN():
 
 if __name__ == '__main__':
     env_name = 'SHCN_TOKEN'
-    token = os.getenv(env_name)
-    if not token:
+    tokenStr = os.getenv(env_name)
+    if not tokenStr:
         print(f'⛔️未获取到ck变量：请检查变量 {env_name} 是否填写')
         exit(0)
 
-    SHCN(token).main()
+    SHCN(tokenStr).main()

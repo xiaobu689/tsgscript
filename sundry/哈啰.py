@@ -14,18 +14,16 @@ import os
 
 import requests
 
+from sendNotify import send
+
 
 class TTCY():
     def __init__(self, token):
         self.token = token
-
-    # 签到
-    def hello_sign(self):
-        headers = {
+        self.headers = {
             'Host': 'api.hellobike.com',
             'Accept': 'application/json, text/plain, */*',
             'Sec-Fetch-Site': 'same-site',
-            'requestId': '4uXHKDCygcAAksp',
             'Accept-Encoding': 'gzip, deflate, br',
             'Accept-Language': 'zh-CN,zh-Hans;q=0.9',
             'Sec-Fetch-Mode': 'cors',
@@ -37,6 +35,8 @@ class TTCY():
             'Sec-Fetch-Dest': 'empty',
         }
 
+    # 签到
+    def hello_sign(self):
         json_data = {
             'from': 'h5',
             'systemCode': 61,
@@ -45,9 +45,8 @@ class TTCY():
             'action': 'common.welfare.signAndRecommend',
             'token': self.token,
         }
-
         url = 'https://api.hellobike.com/api?common.welfare.signAndRecommend'
-        response = requests.post(url, headers=headers, json=json_data).json()
+        response = requests.post(url, headers=self.headers, json=json_data).json()
         # print(response)
         if response['code'] == 0 and response['data']['didSignToday']:
             msg = f'✅签到成功, 奖励金：+{response["data"]["bountyCountToday"]}'
@@ -58,12 +57,31 @@ class TTCY():
         return msg
 
     # 查询奖励金
+    def hello_point(self):
+        json_data = {
+            'from': 'h5',
+            'systemCode': 61,
+            'platform': 4,
+            'version': '6.63.0',
+            'action': 'user.taurus.pointInfo',
+            'token': self.token,
+            'pointType': 1,
+        }
+        url = 'https://api.hellobike.com/api?user.taurus.pointInfo'
+        response = requests.post(url, headers=self.headers, json=json_data).json()
+        if response['code'] == 0:
+            msg = f'✅可用奖励金：{response["data"]["amount"]}'
+        else:
+            msg = '❌查询奖励金失败， cookie可能已失效！'
+
+        print(msg)
+        return msg
 
     def main(self):
-        self.hello_sign()
+        msg1 = self.hello_sign()
+        msg2 = self.hello_point()
 
-        # 通知
-        # send(title, msg)
+        send("哈啰单车", msg1 + msg2)
 
 
 if __name__ == '__main__':

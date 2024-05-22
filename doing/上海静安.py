@@ -87,7 +87,7 @@ class SHJA():
                 print(f'👻{i["title"]}: {"已完成" if i["status"] == "1" else now_pro}')
             print("-----------------------")
             print(f'👀今日新增积分: {today_scores}')
-            print(f'👀签到结果: {sign_days_str}')
+            print(f'👀{sign_days_str}')
 
         return response
 
@@ -128,7 +128,7 @@ class SHJA():
         response = requests.post(url, headers=self.headers, json=json_data, verify=self.verify).json()
         status_codes.append(response.get('code', None))
         if all(code == 0 for code in status_codes):
-            print(f'✅文章{id} 阅读成功 | 次数扣减成功 | 积分增加成功')
+            print(f'✅文章{id} 阅读成功')
         else:
             print(f'文章{id}阅读失败：{response_get}')
 
@@ -147,7 +147,7 @@ class SHJA():
         response = requests.post(url, headers=self.headers, json=json_data, verify=self.verify).json()
         status_codes.append(response.get('code', None))
         if all(code == 0 for code in status_codes):
-            print(f'✅文章{id} 收藏成功 | 积分增加成功')
+            print(f'✅文章{id} 收藏成功')
         else:
             print(f'❌文章{id} 收藏失败：{response_favor}')
 
@@ -189,14 +189,15 @@ class SHJA():
         counter = 0
         for i in article_list:
             article_id = random.choice(article_list)["id"]
-            print(f'🐹随机抓取到文章: {article_id}，开始完成任务......')
-            if counter > 10:
+            print('--------------------------------------------------------------------')
+            print(f'🐹随机抓取到文章{i}: {article_id}，开始做任务啦......')
+            if counter > 12:
                 break
             self.article_read_task(article_id)
             time.sleep(random.randint(20, 30))
             self.article_share_task(article_id)
             time.sleep(random.randint(10, 18))
-            if counter <= 1:
+            if counter <= 5:
                 self.article_favor_task(article_id)
                 time.sleep(random.randint(10, 20))
             counter += 1
