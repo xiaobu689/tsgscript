@@ -4,7 +4,7 @@
 抓任意包请求头 token
 变量名: SHCN_TOKEN
 
-cron: 32 9,17 * * *
+cron: 32 9 * * *
 const $ = new Env("上海长宁");
 """
 import os

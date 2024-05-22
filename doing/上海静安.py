@@ -4,7 +4,7 @@
 抓任意包请求头 token
 变量名: SHJA_TOKEN
 
-cron: 13 8,16 * * *
+cron: 13 8 * * *
 const $ = new Env("上海静安");
 """
 import os
