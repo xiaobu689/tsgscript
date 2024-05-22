@@ -1,15 +1,19 @@
 """
 上海长宁
+
 抓任意包请求头 token
-变量名: QDXW_TOKEN
-cron: 35 10 * * *
+变量名: SHCN_TOKEN
+
+cron: 32 9,17 * * *
 const $ = new Env("上海长宁");
 """
 import os
 import random
 import time
 import requests
-
+from urllib3.exceptions import InsecureRequestWarning, InsecurePlatformWarning
+requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
+requests.packages.urllib3.disable_warnings(InsecurePlatformWarning)
 
 class SHCN():
     name = "上海长宁"
@@ -63,8 +67,12 @@ class SHCN():
         response = requests.post(url, headers=self.headers, json=json_data, verify=False).json()
         print(f'👀任务列表：response=', response)
         if response['code'] == 0:
-            print(f'👀任务列表👀')
+            print("-----------------------")
+            print(f'🐹🐹🐹任务列表🐹🐹🐹')
+            print("-----------------------")
             for i in response['data']['jobs']:
+                if "完善个人资料" in i["title"] or "填写邀请码" in i["title"]:
+                    continue
                 print(f'👻{i["title"]}: {"已完成" if i["status"] == "1" else "未完成"}')
 
     def article_list(self):
@@ -73,12 +81,11 @@ class SHCN():
             'channel': {
                 'id': 'fc83f7ef2a6f4c9d826cba3702adcc78',
             },
-            'pageSize': 20,
+            'pageSize': 50,
             'pageNo': 1,
         }
         url = 'https://cnapi.shmedia.tech/media-basic-port/api/app/news/content/list'
         response = requests.post(url, headers=self.headers, json=json_data, verify=False).json()
-        # print(response)
 
         return response["data"]["records"]
 
@@ -124,10 +131,19 @@ class SHCN():
         else:
             print(f'❌分享失败，{response}')
 
+    def video_view_task(self):
+        json_data = {}
+        url = 'https://cnapi.shmedia.tech/media-basic-port/api/app/points/video/add'
+        response = requests.post(url, headers=self.headers, json=json_data, verify=self.verify).json()
+        if response['code'] == 0:
+            print(f'✅一条视频已经看完啦!')
+        else:
+            print(f'❌视频观看失败：{response}')
+
     def gift_list(self):
         # TODO
         print('--------------------')
-        print('👀可兑换商品列表👀')
+        print('🐹🐹🐹可兑换商品列表🐹🐹🐹')
         print('--------------------')
         print('😂积分太少啦，暂无商品可兑换')
 
@@ -135,18 +151,23 @@ class SHCN():
         self.sign()
         self.task_list()
         counter = 0
-        list = self.article_list()
-        for i in list:
-            if counter >= 3:
+        article_list = self.article_list()
+        for i in article_list:
+            article_id = random.choice(article_list)["id"]
+            print(f'🐹随机抓取到文章: {article_id}，开始完成任务......')
+            if counter >= 10:
                 break
-            self.article_read(i["id"])
+            self.article_read(article_id)
             time.sleep(random.randint(20, 30))
-            self.article_share(i["id"])
+            self.article_share(article_id)
             time.sleep(random.randint(10, 18))
             if counter <= 5:
-                self.article_favor(i["id"])
+                self.article_favor(article_id)
                 time.sleep(random.randint(10, 20))
             counter += 1
+        for i in range(5):
+            self.video_view_task()
+            time.sleep(random.randint(20, 30))
         self.total_score()
         self.today_score()
         self.gift_list()

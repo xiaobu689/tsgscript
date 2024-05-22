@@ -116,7 +116,7 @@ class SSX():
         msg = f'-----------------------------------\n'
         response = requests.post(url, headers=headers, json=data).json()
         if response['errCode'] == 0:
-            msg += f'✅领取成功！\n'
+            msg += f'✅今日兜豆奖励领取成功！\n'
             print(msg)
         elif response['errCode'] == -2763132:
             msg += f'❌已经领取过了，请勿重复领取！\n'
@@ -389,12 +389,11 @@ class SSX():
         }
         url = 'https://api.shmaas.net/actbizgtw/v1/completeActivityTask'
         response = requests.post(url, headers=headers, json=json_data).json()
-        print("-----------------response=", response)
         if response['errCode'] == 0:
             msg = f'✅签到成功，抽奖次数：+1\n'
             print(msg)
         else:
-            msg = f'❌签到失败，{response["errMsg"]}\n'
+            msg = f'😄{response["errMsg"]}\n'
             print(msg)
 
         return msg
@@ -499,7 +498,6 @@ class SSX():
         msg1 = self.getUserInfo()
         time.sleep(random.randint(8, 15))
 
-        msg2 = self.task_list()
         msg3 = self.get_game_info()
         time.sleep(random.randint(7, 15))
 
@@ -512,10 +510,15 @@ class SSX():
 
         msg6 = self.sign()
         time.sleep(random.randint(5, 15))
-        msg7 = self.lottery()
-        time.sleep(random.randint(5, 15))
+
+        while True:
+            msg7 = self.lottery()
+            time.sleep(random.randint(5, 15))
+            if msg7.find('抽奖失败') != -1:
+                break
 
         msg8 = self.receive()
+        msg2 = self.task_list()
 
         msg = msg1 + msg2 + msg3 + msg4 + msg5 + msg6 + msg7 + msg8
 

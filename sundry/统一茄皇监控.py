@@ -23,11 +23,11 @@ requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 if os.path.isfile('DEV_ENV.py'):
     import DEV_ENV
 
-if os.path.isfile('notify.py'):
-    from notify import send
-    print("加载通知服务成功！")
-else:
-    print("加载通知服务失败!")
+# if os.path.isfile('notify.py'):
+#     from notify import send
+#     print("加载通知服务成功！")
+# else:
+#     print("加载通知服务失败!")
 send_msg = ''
 one_msg=''
 def Log(cont=''):

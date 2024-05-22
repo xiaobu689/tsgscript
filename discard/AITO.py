@@ -1,5 +1,7 @@
 """
 华为AITO
+抓包任意url请求头token
+
 定时设置：
 cron: 40 6 * * *
 const $ = new Env("华为AITO");
@@ -9,22 +11,16 @@ import os
 
 import requests
 # from sign.notify import notify_pushPlus
-print("This script is disabled.")
-exit(0)
+# print("This script is disabled.")
+# exit(0)
 
 
 class AITO:
-    def __init__(self, cookie):
-        self.cookie = cookie
-
-    def sign_account_info(self):
-        message = ''
-        url = 'https://aim.longwisedata.com/lwmarketing_user_api/selectPersonInfoOne?token=34311e63fc59d2dc13c05ac6d1eb67b8&timestamp=1714814957486&sig=189484bc910e3032cdd760621c366877'
-
-        headers = {
+    def __init__(self, token):
+        self.token = token
+        self.headers = {
             'Host': 'aim.longwisedata.com',
             'Sec-Fetch-Site': 'same-origin',
-            'Cookie': self.cookie,
             'Connection': 'keep-alive',
             'Sec-Fetch-Mode': 'cors',
             'Accept': 'application/json, text/plain, */*',
@@ -34,11 +30,14 @@ class AITO:
             'Accept-Encoding': 'gzip, deflate, br'
         }
 
-        response = requests.get(url, headers=headers)
-        print(response.text)
-        data = response.json()
-        if data.get('result') == '0':
-            integral = data.get('data').get('integral')
+    def sign_account_info(self):
+        message = ''
+        url = 'https://aim.longwisedata.com/lwmarketing_user_api/selectPersonInfoOne?token=0935a6ee0205880cfa36c049a4ceb38c&timestamp=1716279435019&sig=025cc4e7ebda0cba452c9e2c075d162a'
+        response = requests.get(url, headers=self.headers).json()
+        print(response)
+        data = response
+        if response["result"] == 0:
+            integral = response["data"]["integral"]
             message += f"✅帐号：{data.get('data').get('nick')}\n"
             message += f"✅积分：{data.get('data').get('integral')}\n"
         else:
@@ -50,22 +49,8 @@ class AITO:
     # 京东礼品卡列表
     def gift_list(self):
         url = 'https://mall.longwisedata.com/api/product/v1/card/defs/40/detail'
-        headers = {
-            'Host': 'mall.longwisedata.com',
-            'Sec-Fetch-Site': 'same-origin',
-            'Accept-Encoding': 'gzip, deflate, br',
-            'Cookie': self.cookie,
-            'Connection': 'keep-alive',
-            'Sec-Fetch-Mode': 'cors',
-            'Accept': 'application/json',
-            'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.49(0x18003127) NetType/4G Language/zh_CN miniProgram/wx1a2dd9470fae37c4',
-            'Referer': 'https://mall.longwisedata.com/web/h5/thirdcard/detail/40',
-            'Sec-Fetch-Dest': 'empty',
-            'Accept-Language': 'zh-CN,zh-Hans;q=0.9'
-        }
-
-        response = requests.get(url, headers=headers).json()
-        # print(response)
+        response = requests.get(url, headers=self.headers).json()
+        print(response)
         return response["result"]["skus"]
 
     # 签到
@@ -73,29 +58,13 @@ class AITO:
         message = ""
         # 签到
         url = 'https://aim.longwisedata.com/lwmarketing_user_api/taskSquare/signIn/signIn'
-
-        headers = {
-            'Host': 'aim.longwisedata.com',
-            'Accept': 'application/json, text/plain, */*',
-            'Sec-Fetch-Site': 'same-origin',
-            'Accept-Encoding': 'gzip, deflate, br',
-            'Accept-Language': 'zh-CN,zh-Hans;q=0.9',
-            'Sec-Fetch-Mode': 'cors',
-            'Content-Type': 'application/x-www-form-urlencoded',
-            'Origin': 'https://aim.longwisedata.com',
-            'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.49(0x18003127) NetType/4G Language/zh_CN',
-            'Connection': 'keep-alive',
-            'Cookie': self.cookie,
-            'Sec-Fetch-Dest': 'empty'
-        }
-
         data = {
-            'token': '34311e63fc59d2dc13c05ac6d1eb67b8',
-            'timestamp': '1714814957486',
-            'sig': '189484bc910e3032cdd760621c366877'
+            'token': '0935a6ee0205880cfa36c049a4ceb38',
+            'timestamp': '1716279435019',
+            'sig': '025cc4e7ebda0cba452c9e2c075d162a'
         }
 
-        response = requests.post(url, headers=headers, data=data)
+        response = requests.post(url, headers=self.headers, data=data)
         data = response.json()
         print(response.text)
         if data.get('result') == '200' or data.get('result') == '0':
@@ -108,22 +77,8 @@ class AITO:
         return message
 
     def sign_task_list(self):
-        url = 'https://aim.longwisedata.com/lwmarketing_user_api/taskList?token=34311e63fc59d2dc13c05ac6d1eb67b8&timestamp=1714814957486&sig=189484bc910e3032cdd760621c366877&pageNum=1&pageSize=10'
-
-        headers = {
-            'Host': 'aim.longwisedata.com',
-            'Sec-Fetch-Site': 'same-origin',
-            'Cookie': self.cookie,
-            'Connection': 'keep-alive',
-            'Sec-Fetch-Mode': 'cors',
-            'Accept': 'application/json, text/plain, */*',
-            'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.49(0x18003127) NetType/WIFI Language/zh_CN',
-            'Accept-Language': 'zh-CN,zh-Hans;q=0.9',
-            'Sec-Fetch-Dest': 'empty',
-            'Accept-Encoding': 'gzip, deflate, br'
-        }
-
-        response = requests.get(url, headers=headers)
+        url = 'https://aim.longwisedata.com/lwmarketing_user_api/taskList?token=0935a6ee0205880cfa36c049a4ceb38c&timestamp=1716279435019&sig=025cc4e7ebda0cba452c9e2c075d162a&pageNum=1&pageSize=10'
+        response = requests.get(url, headers=self.headers)
         # print(response.text)
         data = response.json()
         if data.get('result') == '0':
@@ -139,53 +94,23 @@ class AITO:
                     print("Article Title:", article_title)
                     print("Article URL:", article_url)
                     # 领取任务
-                    # 签到
                     url = 'https://aim.longwisedata.com/lwmarketing_user_api/taskForward/receiveTask'
-
-                    headers = {
-                        'Host': 'aim.longwisedata.com',
-                        'Accept': 'application/json, text/plain, */*',
-                        'Sec-Fetch-Site': 'same-origin',
-                        'Accept-Encoding': 'gzip, deflate, br',
-                        'Accept-Language': 'zh-CN,zh-Hans;q=0.9',
-                        'Sec-Fetch-Mode': 'cors',
-                        'Content-Type': 'application/x-www-form-urlencoded',
-                        'Origin': 'https://aim.longwisedata.com',
-                        'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.49(0x18003127) NetType/4G Language/zh_CN',
-                        'Connection': 'keep-alive',
-                        'Cookie': self.cookie,
-                        'Sec-Fetch-Dest': 'empty'
-                    }
-
                     data = {
-                        'token': '34311e63fc59d2dc13c05ac6d1eb67b8',
-                        'timestamp': '1714814957486',
-                        'sig': '189484bc910e3032cdd760621c366877',
+                        'token': '0935a6ee0205880cfa36c049a4ceb38',
+                        'timestamp': '1716279435019',
+                        'sig': '025cc4e7ebda0cba452c9e2c075d162a',
                         'taskId': task_id,
                         'taskType': task_type
                     }
 
-                    response = requests.post(url, headers=headers, data=data)
+                    response = requests.post(url, headers=self.headers, data=data)
                     print("任务领取成功：", response.text)
         else:
             print("Failed to get task list.")  # {"result":"0","msg":"success"}
 
     def sign_my_tasklist(self):
         url = 'https://aim.longwisedata.com/lwmarketing_user_api/myTaskList?token=431d27a0ddb0aa1959c40af487aa4da9&timestamp=1714828633254&sig=fe0ca62a0b3ae9f4dce0e224fa3a257f&pageNum=1&pageSize=10&type=2'
-        headers = {
-            'Host': 'aim.longwisedata.com',
-            'Sec-Fetch-Site': 'same-origin',
-            'Cookie': self.cookie,
-            'Connection': 'keep-alive',
-            'Sec-Fetch-Mode': 'cors',
-            'Accept': 'application/json, text/plain, */*',
-            'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.49(0x18003127) NetType/WIFI Language/zh_CN',
-            'Accept-Language': 'zh-CN,zh-Hans;q=0.9',
-            'Sec-Fetch-Dest': 'empty',
-            'Accept-Encoding': 'gzip, deflate, br'
-        }
-
-        response = requests.get(url, headers=headers)
+        response = requests.get(url, headers=self.headers)
         data = response.json()
         # print(response.text)
         if data.get('result') == '0':
@@ -246,10 +171,11 @@ class AITO:
 
 if __name__ == '__main__':
     env_name = 'AITO_COOKIE'
-    AITO_COOKIE = os.getenv(env_name)
-    AITO_COOKIE = 'acw_tc=2760774d17155292543476252e9b1a62e32359fcf2d299db8b47a1e4b05f9e'
-    if not AITO_COOKIE:
+    AITO_TOKEN = os.getenv(env_name)
+    AITO_TOKEN = 'acw_tc=2760820e17162794286216565e54f6e07624769e97723698a67bec1d189464'
+    if not AITO_TOKEN:
         print(f'⛔️未获取到ck变量：请检查变量 {env_name} 是否填写')
         exit(0)
-    # 创建 AITO 实例并调用 main 方法
-    print(AITO(AITO_COOKIE).main())
+
+
+    print(AITO(AITO_TOKEN).main())
