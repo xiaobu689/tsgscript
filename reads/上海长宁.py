@@ -213,7 +213,7 @@ class SHCN():
             print(f'🐹随机抓取到一篇文章{article_id}，开始做任务......')
             self.article_read(article_id)
             print("🐢开始评论，假装我在打字......")
-            time.sleep(random.randint(40, 60))
+            time.sleep(random.randint(20, 35))
             self.article_comment_task(article_id)
             time.sleep(random.randint(10, 20))
             self.article_share(article_id)
