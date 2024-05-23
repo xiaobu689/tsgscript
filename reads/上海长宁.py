@@ -4,7 +4,7 @@
 抓任意包请求头 token
 变量名: SHCN_TOKEN
 
-cron: 32 9 * * *
+cron: 35 10 * * *
 const $ = new Env("上海长宁");
 """
 import os
@@ -72,7 +72,6 @@ class SHCN():
         json_data = {}
         url = 'https://cnapi.shmedia.tech/media-basic-port/api/app/personal/score/info'
         response = requests.post(url, headers=self.headers, json=json_data, verify=False).json()
-        print(f'👀任务列表：response=', response)
         if response['code'] == 0:
             print("-----------------------")
             print(f'🐹🐹🐹任务列表🐹🐹🐹')
@@ -206,7 +205,7 @@ class SHCN():
                 break
             article_id = random.choice(article_list)["id"]
             print('--------------------------------------------------------------------')
-            print(f'🐹随机抓取到一篇文章: {article_id}，开始做任务......')
+            print(f'🐹随机抓取到一篇文章{article_id}，开始做任务......')
             self.article_read(article_id)
             time.sleep(random.randint(30, 60))
             self.article_comment_task(article_id)

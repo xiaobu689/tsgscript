@@ -190,7 +190,7 @@ class SHJA():
         for i in article_list:
             article_id = random.choice(article_list)["id"]
             print('--------------------------------------------------------------------')
-            print(f'🐹随机抓取到文章{i}: {article_id}，开始做任务啦......')
+            print(f'🐹随机抓取到文章{article_id}，开始做任务啦......')
             if counter > 12:
                 break
             self.article_read_task(article_id)
