@@ -185,7 +185,10 @@ class SHCN():
         if comment == '':
             print(f'😢未知错误或者文章可能评论过，算了吧，下一个')
         else:
-            print(f'🐌预评论内容：{comment}, 你没意见我就在20s后评论了哈......')
+            parts = comment.split('#')
+            if len(parts) > 1:
+                comment = parts[1].strip()
+            print(f'🐌预评论内容：【{comment}】, 你没意见我就在20s后评论了哈......')
             time.sleep(random.randint(20, 25))
             self.article_comment_add(id, comment)
 
