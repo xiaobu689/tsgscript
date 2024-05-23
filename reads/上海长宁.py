@@ -185,6 +185,8 @@ class SHCN():
         if comment == '':
             print(f'😢未知错误或者文章可能评论过，算了吧，下一个')
         else:
+            print(f'🐌预评论内容：{comment}, 你没意见我就在20s后评论了哈......')
+            time.sleep(random.randint(20, 25))
             self.article_comment_add(id, comment)
 
     def gift_list(self):
@@ -214,7 +216,7 @@ class SHCN():
             self.article_share(article_id)
             time.sleep(random.randint(10, 18))
             if self.isComment == 1:
-                self.article_comment_task()
+                self.article_comment_task(article_id)
                 time.sleep(random.randint(5, 10))
             if counter <= 5:
                 self.article_favor(article_id)
