@@ -5,8 +5,91 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ddd6a936-d130-44c7-9d8d-4d16ab3c823e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/doing/上海嘉定.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doing/交汇点.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doing/北京现代.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doing/华润通.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doing/青岛新闻.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doing/顺义创城.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common.py" beforeDir="false" afterPath="$PROJECT_DIR$/common.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doing/TodoList.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doing/template.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doing/上海静安.py" beforeDir="false" afterPath="$PROJECT_DIR$/reads/上海静安.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reads/上海长宁.py" beforeDir="false" afterPath="$PROJECT_DIR$/reads/上海长宁.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reads/南湖声音.js" beforeDir="false" afterPath="$PROJECT_DIR$/reads/南湖声音.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reads/可乐读书.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reads/小阅阅.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reads/淘小说.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reads/番茄小说.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reads/趣味阅读.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reads/趣看365.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sundry/太平洋汽车.py" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/太平洋汽车.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/bjxd.js" beforeDir="false" afterPath="$PROJECT_DIR$/doing/bjxd.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/ddsy_songyao.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/dffx.js" beforeDir="false" afterPath="$PROJECT_DIR$/vehicle/东风风行.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/dt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/exeedcars.js" beforeDir="false" afterPath="$PROJECT_DIR$/vehicle/Hi星途.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/gacmotor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/gjzp.js" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/工匠职聘.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/gqftbz.js" beforeDir="false" afterPath="$PROJECT_DIR$/uncheck/gqftbz.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/hezj.js" beforeDir="false" afterPath="$PROJECT_DIR$/uncheck/hezj.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/htx.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/jetta.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/jlyh.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/jlzx.js" beforeDir="false" afterPath="$PROJECT_DIR$/vehicle/江铃智行.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/jrtt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/kfw/kfw.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/kfw/kfw_exchange.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/mtf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/nhsy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/qimao/qimao.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/qimao/qmgold.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/qimao/qmxs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/qimao/qmxs2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/qimao/qmyd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/qtx.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/ruilanCar.js" beforeDir="false" afterPath="$PROJECT_DIR$/uncheck/ruilanCar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/sendNotify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/suboer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/wx_gjjkpro.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/wx_midea.js" beforeDir="false" afterPath="$PROJECT_DIR$/uncheck/美的会员.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/wx_xlxyh.js" beforeDir="false" afterPath="$PROJECT_DIR$/discard/wx_xlxyh.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/xbox.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/yingsheng.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/yingsheng_v2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/yyq.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/zqkdFast/zqkdFast_kkz.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/zqkdFast/zqkdFast_read.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/zqkdFast/zqkdFast_reward.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/zstjjsb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/上官新闻.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/乐玩星球.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/凯翼汽车.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/品赞HTTP代理签到.js" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/品赞HTTP代理签到.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/喜马拉雅签到.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/喜马拉雅转盘抽奖.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/大为健康-店铺ID.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/大为健康.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/好人家美味生活馆.js" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/好人家美味生活馆.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/广汽传祺-微信小程序.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/建行生活奋斗季cc豆.py" beforeDir="false" afterPath="$PROJECT_DIR$/discard/建行生活奋斗季cc豆.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/悦临平.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/悦野圈.js" beforeDir="false" afterPath="$PROJECT_DIR$/uncheck/悦野圈.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/托迈酷客.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/掌上天津极速版.js" beforeDir="false" afterPath="$PROJECT_DIR$/discard/掌上天津极速版.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/新战马能量星球.js" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/新战马能量星球.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/植白说.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/熊猫脑洞小说.js" beforeDir="false" afterPath="$PROJECT_DIR$/reads/熊猫脑洞小说.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/猫猫看看.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/王老吉越龙门.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/申工社.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/百观.js" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/百观.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/立白VIP.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/艾克帮.js" beforeDir="false" afterPath="$PROJECT_DIR$/sundry/艾克帮.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/读特.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/钢蹦阅读.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uncheck/阅龙湾.js" beforeDir="false" afterPath="$PROJECT_DIR$/reads/阅龙湾.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,8 +114,8 @@
     <setting file="file://$USER_HOME$/Documents/WeChat Files/wxid_u8qw5xouz0cf22/FileStorage/File/2024-05/insert_mul.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Documents/WeChat Files/wxid_u8qw5xouz0cf22/FileStorage/File/2024-05/上海静安.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/discard/AITO.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/doing/上海静安.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/reads/上海长宁.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/reads/上海静安.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/sundry/随申行.py" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -61,7 +144,7 @@
     &quot;last_opened_file_path&quot;: &quot;D:/workspace/src/tsgscript/doing&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.aicode&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;TONGYI Lingma&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -75,14 +158,14 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\workspace\src\tsgscript\reads" />
-      <recent name="D:\workspace\src\tsgscript" />
-      <recent name="D:\workspace\src\tsgscript\doing" />
+      <recent name="D:\workspace\src\tsgscript\sundry" />
       <recent name="D:\workspace\src\tsgscript\discard" />
-      <recent name="D:\workspace\src\tsgscript\common" />
+      <recent name="D:\workspace\src\tsgscript\vehicle" />
+      <recent name="D:\workspace\src\tsgscript\doing" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.565">
-    <configuration name="111" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.顺义创城">
+    <configuration name="华润通" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="tsgscript" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -90,11 +173,32 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/doing" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/111.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/doing/华润通.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="上海嘉定" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="tsgscript" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/doing" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/doing/上海嘉定.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -124,7 +228,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="565" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="顺义创城" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="tsgscript" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -132,53 +236,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/doing" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/565.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="上海长宁" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="tsgscript" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/reads" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/reads/上海长宁.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="上海长宁" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="tsgscript" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/reads" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/reads/上海长宁.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/doing/顺义创城.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -292,6 +354,90 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="品赞" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="tsgscript" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/doing" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/doing/品赞.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="青岛新闻" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="tsgscript" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/doing" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/doing/青岛新闻.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="顺义创城" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="tsgscript" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/doing" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/doing/顺义创城.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="上海嘉定" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="tsgscript" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/doing" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/doing/上海嘉定.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="上海静安" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="tsgscript" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -313,7 +459,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="common" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="捷达" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="tsgscript" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -321,11 +467,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/doing" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/common.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/doing/捷达.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -334,7 +480,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="gpt" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="上海长宁" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="tsgscript" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -342,11 +488,32 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/reads" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gpt.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/reads/上海长宁.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="上海长宁" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="tsgscript" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/reads" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/reads/上海长宁.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -357,11 +524,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.565" />
+        <item itemvalue="Python.顺义创城" />
+        <item itemvalue="Python.上海嘉定" />
+        <item itemvalue="Python.华润通" />
         <item itemvalue="Python.上海长宁" />
-        <item itemvalue="Python.common" />
-        <item itemvalue="Python.111" />
-        <item itemvalue="Python.gpt" />
       </list>
     </recent_temporary>
   </component>
@@ -413,14 +579,29 @@
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/doing/上海静安.py</url>
+          <url>file://$PROJECT_DIR$/reads/上海静安.py</url>
           <line>152</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/doing/上海静安.py</url>
+          <url>file://$PROJECT_DIR$/reads/上海静安.py</url>
           <line>143</line>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/doing/华润通.py</url>
+          <line>60</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/doing/华润通.py</url>
+          <line>62</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/reads/上海静安.py</url>
+          <line>141</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -1,6 +1,8 @@
 """
 太平洋汽车抽奖
 
+20240523 每日抽奖已废，新增每日开盲盒
+
 APP：太平洋汽车
 变量名：tpyqc_cookie
 格式： cookie#手机号#openid#devId

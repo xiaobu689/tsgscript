@@ -3,9 +3,8 @@ import random
 from http import HTTPStatus
 import dashscope
 
-basic_news_question = '我需要你针对下面的文章，从一个民众的角度进行评论，我希望你的输出只有评论内容，没有别的无关紧要的词语，回复格式是：芝麻开门#你的评论#， 评论要日常化，字数在10-25字之间，下面是我需要你发表评论的文章内容：'
 
-
+# 通义千问API
 def qianwen_messages(basic_question, question):
     content = ''
     qw_key = os.getenv("QIANWEN_KEY")
@@ -28,5 +27,4 @@ def qianwen_messages(basic_question, question):
                 response.request_id, response.status_code,
                 response.code, response.message
             ))
-
     return content

@@ -1,4 +1,13 @@
 """
+北京现代APP
+积分兑换实物，积分涨的比较慢，10积分=1元
+捉域名bm2-api.bluemembers.com.cn任意包的token填到 bjxdCookie 里
+
+定时：一天一两次
+cron: 36 7,20 * * *
+const $ = new Env("北京现代")
+"""
+"""
 上海长宁
 
 抓任意包请求头 token
@@ -24,9 +33,8 @@ requests.packages.urllib3.disable_warnings(InsecurePlatformWarning)
 class SHCN():
     name = "上海长宁"
 
-    def __init__(self, tokenStr):
-        self.token = tokenStr.split('#')[0]
-        self.isComment = tokenStr.split('#')[1]
+    def __init__(self, cookie):
+        self.cookie = cookie
         self.verify = False
         self.headers = {
             'Host': 'cnapi.shmedia.tech',
@@ -151,7 +159,7 @@ class SHCN():
             print(f'❌看片儿失败：{response}')
 
     def get_gpt_comment(self, id):
-        basic_news_question = '我需要你针对下面的文章，从一个民众的角度进行评论，我希望你的输出只有评论内容，没有别的无关紧要的词语，回复格式是：芝麻开门#你的评论#， 评论要日常化，字数在10-25字之间，下面是我需要你发表评论的文章内容：'
+
         article_concent = ''
         response = self.article_content(id)
         comment = ''
@@ -218,10 +226,10 @@ class SHCN():
             time.sleep(random.randint(10, 20))
             self.article_share(article_id)
             time.sleep(random.randint(10, 18))
+            if self.isComment == 1:
+                self.article_comment_task(article_id)
+                time.sleep(random.randint(5, 10))
             if counter <= 5:
-                if self.isComment == 1:
-                    self.article_comment_task(article_id)
-                    time.sleep(random.randint(5, 10))
                 self.article_favor(article_id)
                 time.sleep(random.randint(10, 20))
             counter += 1
@@ -234,10 +242,10 @@ class SHCN():
 
 
 if __name__ == '__main__':
-    env_name = 'SHCN_TOKEN'
-    tokenStr = os.getenv(env_name)
-    if not tokenStr:
+    env_name = 'bjxdCookie'
+    cookie = os.getenv(env_name)
+    if not cookie:
         print(f'⛔️未获取到ck变量：请检查变量 {env_name} 是否填写')
         exit(0)
 
-    SHCN(tokenStr).main()
+    SHCN(cookie).main()
