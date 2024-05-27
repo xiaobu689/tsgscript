@@ -5,7 +5,7 @@
 变量名: SHJD_TOKEN
 
 cron: 20 14 * * *
-const $ = new Env("上海长宁");
+const $ = new Env("上海嘉定");
 """
 import os
 import random
@@ -24,23 +24,21 @@ requests.packages.urllib3.disable_warnings(InsecurePlatformWarning)
 class SHJD():
     name = "上海嘉定"
 
-    def __init__(self, tokenStr):
-        self.token = tokenStr.split('#')[0]
-        self.isComment = tokenStr.split('#')[1]
+    def __init__(self, account_info):
+        self.token = account_info.split('#')[0]
+        self.isComment = account_info.split('#')[1]
         self.verify = False
         self.giftHeaders = {
             'Host': 'mall-api.shmedia.tech',
             'Authorization': 'eyJhbGciOiJIUzUxMiJ9.eyJ1aWQiOjE3OTM1NDU4NjkyMzk4NTcxNTQsInN1YiI6InVzZXIiLCJzaXRlIjoiMzEwMTE0IiwiYXJlYVByZWZpeCI6ImpkIiwicm9sZXMiOlsiQlVZRVIiXSwibW9iaWxlIjoiMTc4NTQyNzk1NjUiLCJzaG9wSWQiOiIzMTAxMTQwMSIsImxpdmVNZXNzYWdlIjpudWxsLCJleHAiOjE3MTkwNDE2MzIsInV1aWQiOiI2YTk0OGEwZi03MGJhLTRhZDItYjNkZi0yZmI2Yjg5ZDJmMDAiLCJ1c2VybmFtZSI6Im1lZGlhX2IzZWNhYWRhIiwidGFyZ2V0IjoibWVkaWEifQ.U-rNA7XHMk-b5E3yPAQRm0SHo8KCtibP6lly7HSmWJmmZFBdXrxsp5OfGc7RORkh2UnoT36_99_Pvt5GJsEWpw',
             'Sec-Fetch-Site': 'same-site',
-            'Accept-Language': 'zh-CN,zh-Hans;q=0.9',
-            # 'Accept-Encoding': 'gzip, deflate, br',
             'Sec-Fetch-Mode': 'cors',
             'Origin': 'https://mall-mobile.shmedia.tech',
             'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Rmt/JiaDing; Version/3.1.8',
             'Referer': 'https://mall-mobile.shmedia.tech/',
             'Connection': 'keep-alive',
             'Accept': 'application/json, text/plain, */*',
-            'Sec-Fetch-Dest': 'empty',
+            'Sec-Fetch-Dest': 'empty'
         }
         self.headers = {
             'Host': 'jdweb.shmedia.tech',
@@ -48,17 +46,13 @@ class SHJD():
             'Accept': 'application/json, text/plain, */*',
             'Sec-Fetch-Site': 'same-origin',
             'Accept-Language': 'zh-CN,zh-Hans;q=0.9',
-            # 'Accept-Encoding': 'gzip, deflate, br',
             'Sec-Fetch-Mode': 'cors',
-            'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZDNhZGE1ZGFlM2I0NzcwYjBmYTA2NGZkOGUxMjAxYjM1NDU7MzEwMTE0IiwiaWF0IjoxNzE2NDQ5NjI5LCJleHAiOjI3NTMyNDk2Mjl9.lvPg-d35JijYTQRX6LP71ekkmyb3GlIPrjypFKVkg5DfagW2qVe8FJYO9GkbdTtHfpinteQ0Od2L5JS0d6Llcg',
+            'token': self.token,
             'Origin': 'https://jdweb.shmedia.tech',
-            # 'Content-Length': '41',
             'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Rmt/JiaDing; Version/3.1.8',
             'Referer': 'https://jdweb.shmedia.tech/app_jd/jd_zwxx/20240506/74f4f9713a684badb145f3ddf2ae47c8.html',
             'Connection': 'keep-alive',
-            'siteId': '310114',
-            'Sec-Fetch-Dest': 'empty',
-            # 'Cookie': 'acw_tc=7250b39617166446310297095eae3995c669e2e586a5c50e8ce720f9b2; tfstk=fA6ssLNyloZwFL7SPCEedpQO9d9gzZwPMmtAqiHZDdpOhK_hJCdwQS2bca8EQZSajnwfuekV_PXVRIQPlKRA3EWbcdXF_x8aSKsAzIazz8yPjGvkHzzPFYO7-KKY3EQJ7ytJnKUz88yPjGvczhveGhsLAh--XKHAkJEBDnutMAQAvktDJEd1Iqtn8US_uwVfmn4XPGLIhD6BWCGGXeMxH9My1U32RxHAdhIh7R6nUyACGgWwOHejcH15vZYOX-iXA_sdRQWE8glSzUTVYjiBZxKIskZIijzpZiosmArF1CKHYdrQAj596HxBzkZIijA9xHm4AkGV6; _pk_id.186.95c7=b2b8df8006daf9ff.1716556155.1.1716556974.1716556155.',
+            'Sec-Fetch-Dest': 'empty'
         }
 
     def login_add(self):
@@ -204,27 +198,37 @@ class SHJD():
 
     def article_read(self, id):
         response = self.article_content(id)
-        if response['code'] == 0:
+        if response and response['code'] == 0:
             self.article_read_points_add()
             print(f'✅文章阅读成功')
         else:
             print(f'❌阅读失败，{response}')
 
     def article_favor(self, id):
-        json_data = {
-            'id': id,
-        }
-        url = 'https://jdapi.shmedia.tech/media-basic-port/api/app/news/content/favor'
-        try:
-            response = requests.post(url, headers=self.headers, json=json_data)
-            if response.status_code == 200:
-                response_json = response.json()
-                print(f'✅文章收藏成功')
+        response_content = self.article_content(id)
+        if response_content and response_content['code'] == 0:
+            if response_content['data']['count']["favorite"] is False:
+                json_data = {
+                    'id': id,
+                }
+                url = 'https://jdapi.shmedia.tech/media-basic-port/api/app/news/content/favor'
+                try:
+                    response = requests.post(url, headers=self.headers, json=json_data)
+                    if response.status_code == 200:
+                        response_json = response.json()
+                        print(f'✅文章收藏成功')
+                    else:
+                        print("HTTP request failed with status code:", response.status_code)
+                except requests.exceptions.JSONDecodeError as e:
+                    print("JSON decode error:", e)
+                    print("Response content:", response.text)
+            elif response_content['data']['count']["favorite"]:
+                print(f'已经收藏过了，不再重复收藏')
             else:
-                print("HTTP request failed with status code:", response.status_code)
-        except requests.exceptions.JSONDecodeError as e:
-            print("JSON decode error:", e)
-            print("Response content:", response.text)
+                print(f'❌收藏失败，{response_content}')
+        else:
+            print(f'❌获取文章失败，{response_content}')
+
 
     def article_share(self, id):
         json_data = {}
@@ -342,9 +346,12 @@ class SHJD():
             print("Response content:", response.text)
 
     def main(self):
-        self.userinfo()
-        # self.sign()
         counter = 0
+        self.userinfo()
+        self.sign()
+        for i in range(5):
+            self.video_view_add()
+            time.sleep(random.randint(20, 30))
         article_list = self.article_list()
         for i in article_list:
             if counter > 1:
@@ -361,13 +368,13 @@ class SHJD():
             if counter <= 1:
                 if self.isComment == 1:
                     self.article_comment_task(article_id)
-                    time.sleep(random.randint(5, 10))
+                    time.sleep(random.randint(20, 40))
+                else:
+                    print("未开启自动评论, 如要开启，请更改环境变量配置")
+                    time.sleep(random.randint(10, 25))
                 self.article_favor(article_id)
                 time.sleep(random.randint(10, 20))
             counter += 1
-        for i in range(5):
-            self.video_view_add()
-            time.sleep(random.randint(20, 30))
         self.task_list()
         self.today_score()
         self.gift_list()
@@ -376,9 +383,14 @@ class SHJD():
 if __name__ == '__main__':
     env_name = 'SHJD_TOKEN'
     tokenStr = os.getenv(env_name)
-    tokenStr = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZDNhZGE1ZGFlM2I0NzcwYjBmYTA2NGZkOGUxMjAxYjM1NDU7MzEwMTE0IiwiaWF0IjoxNzE2NDQ5NjI5LCJleHAiOjI3NTMyNDk2Mjl9.lvPg-d35JijYTQRX6LP71ekkmyb3GlIPrjypFKVkg5DfagW2qVe8FJYO9GkbdTtHfpinteQ0Od2L5JS0d6Llcg#0'
     if not tokenStr:
         print(f'⛔️未获取到ck变量：请检查变量 {env_name} 是否填写')
         exit(0)
 
-    SHJD(tokenStr).main()
+    tokens = re.split(r'&', tokenStr)
+    print(f"上海嘉定共获取到{len(tokens)}个账号")
+    for i, account_info in enumerate(tokens, start=1):
+        print(f"\n======== ▷ 第 {i} 个账号 ◁ ========")
+        SHJD(account_info).main()
+        print("\n随机等待30-60s进行下一个账号")
+        time.sleep(random.randint(30, 60))

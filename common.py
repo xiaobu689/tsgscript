@@ -2,6 +2,7 @@ import os
 import random
 from http import HTTPStatus
 import dashscope
+import requests
 
 
 # 通义千问API
@@ -28,3 +29,18 @@ def qianwen_messages(basic_question, question):
                 response.code, response.message
             ))
     return content
+
+
+def make_request(url, json_data=None, method='get', headers=None):
+    try:
+        if method.lower() == 'get':
+            response = requests.get(url, headers=headers, verify=False)
+        else:
+            response = requests.post(url, headers=headers, json=json_data, verify=False)
+        response.raise_for_status()
+        return response.json()
+    except requests.exceptions.RequestException as e:
+        # 这里可以处理错误，例如记录日志或设置全局变量
+        print(f"请求错误: {e}")
+        return None
+

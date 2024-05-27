@@ -9,7 +9,7 @@
  */
 
 const Notify = 1; 		//0为关闭通知,1为打开通知,默认为1
-const disabledPushRedPackage = true; // 如果想开启自动领红包（已兑换的）请改为false；默认禁用，避免使用者小号错过领包
+const disabledPushRedPackage = false; // 如果想开启自动领红包（已兑换的）请改为false；默认禁用，避免使用者小号错过领包
 let redPackage = [{ name: '1.08元', id: '647894196522340352' },
 { name: '1.88元', id: '622187839353806848' },
 { name: '3.88元', id: '622187928306601984' },

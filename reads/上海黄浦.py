@@ -2,10 +2,10 @@
 上海长宁
 
 抓任意包请求头 token
-变量名: SHCN_TOKEN
+变量名: SHHP_TOKEN
 
-cron: 35 10 * * *
-const $ = new Env("上海长宁");
+cron: 33 15 * * *
+const $ = new Env("上海黄浦");
 """
 import os
 import random
@@ -21,15 +21,15 @@ requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 requests.packages.urllib3.disable_warnings(InsecurePlatformWarning)
 
 
-class SHCN():
-    name = "上海长宁"
+class SHHP():
+    name = "上海黄浦"
 
     def __init__(self, account_info):
         self.token = account_info.split('#')[0]
         self.isComment = account_info.split('#')[1]
         self.verify = False
         self.headers = {
-            'Host': 'cnapi.shmedia.tech',
+            'Host': 'hpapi.shmedia.tech',
             'Accept': '*/*',
             'Accept-Encoding': 'gzip, deflate, br',
             'Accept-Language': 'zh-Hans-CN;q=1',
@@ -42,7 +42,7 @@ class SHCN():
 
     def login_score(self):
         json_data = {}
-        url = 'https://cnapi.shmedia.tech/media-basic-port/api/app/points/login/add'
+        url = 'https://hpapi.shmedia.tech/media-basic-port/api/app/points/login/add'
         response = make_request(url, json_data=json_data, method='post', headers=self.headers)
         # print(response)
         if response and response['code'] == 0:
@@ -50,7 +50,7 @@ class SHCN():
 
     def sign(self):
         json_data = {}
-        url = 'https://cnapi.shmedia.tech/media-basic-port/api/app/personal/score/sign'
+        url = 'https://hpapi.shmedia.tech/media-basic-port/api/app/personal/score/sign'
         response = make_request(url, json_data, 'post', self.headers)
         # print(response)
         if response and response['code'] == 0:
@@ -60,7 +60,7 @@ class SHCN():
 
     def total_score(self):
         json_data = {}
-        url = 'https://cnapi.shmedia.tech/media-basic-port/api/app/personal/score/total'
+        url = 'https://hpapi.shmedia.tech/media-basic-port/api/app/personal/score/total'
         response = make_request(url, json_data, 'post', self.headers)
         if response and response['code'] == 0:
             print(f'✅当前总积分：{response["data"]["score"]}')
@@ -69,7 +69,7 @@ class SHCN():
 
     def today_score(self):
         json_data = {}
-        url = 'https://cnapi.shmedia.tech/media-basic-port/api/app/personal/score/info'
+        url = 'https://hpapi.shmedia.tech/media-basic-port/api/app/personal/score/info'
         response = make_request(url, json_data, 'post', self.headers)
         if response and response['code'] == 0:
             print(f'✅今日新增积分：{response["data"]["todayIncreasePoint"]}')
@@ -79,7 +79,7 @@ class SHCN():
 
     def task_list(self):
         json_data = {}
-        url = 'https://cnapi.shmedia.tech/media-basic-port/api/app/personal/score/info'
+        url = 'https://hpapi.shmedia.tech/media-basic-port/api/app/personal/score/info'
         response = make_request(url, json_data, 'post', self.headers)
         if response and response['code'] == 0:
             print("-----------------------")
@@ -94,19 +94,19 @@ class SHCN():
         json_data = {
             'orderBy': 'release_desc',
             'channel': {
-                'id': 'fc83f7ef2a6f4c9d826cba3702adcc78',
+                'id': 'ed5f1618a5274c43a8e33478f5f01515',
             },
             'pageSize': 50,
             'pageNo': 1,
         }
-        url = 'https://cnapi.shmedia.tech/media-basic-port/api/app/news/content/list'
+        url = 'https://hpapi.shmedia.tech/media-basic-port/api/app/news/content/list'
         response = make_request(url, json_data, 'post', self.headers)
 
         return response["data"]["records"]
 
     def article_read_points_add(self):
         json_data = {}
-        url = 'https://cnapi.shmedia.tech/media-basic-port/api/app/points/read/add'
+        url = 'https://hpapi.shmedia.tech/media-basic-port/api/app/points/read/add'
         make_request(url, json_data, 'post', self.headers)
 
     def article_count_usage_desc(self, id):
@@ -114,12 +114,12 @@ class SHCN():
             'id': id,
             'countType': 'contentRead',
         }
-        url = 'https://cnapi.shmedia.tech/media-basic-port/api/app/common/count/usage/inc'
+        url = 'https://hpapi.shmedia.tech/media-basic-port/api/app/common/count/usage/inc'
         make_request(url, json_data, 'post', self.headers)
 
     def article_content(self, id):
         json_data = {'id': id}
-        url = 'https://cnapi.shmedia.tech/media-basic-port/api/app/news/content/get'
+        url = 'https://hpapi.shmedia.tech/media-basic-port/api/app/news/content/get'
         response = make_request(url, json_data, 'post', self.headers)
         return response
 
@@ -135,7 +135,7 @@ class SHCN():
 
     def article_favor(self, id):
         json_data = {'id': id}
-        url = 'https://cnapi.shmedia.tech/media-basic-port/api/app/news/content/favor'
+        url = 'https://hpapi.shmedia.tech/media-basic-port/api/app/news/content/favor'
         response = make_request(url, json_data, 'post', self.headers)
         if response and response['code'] == 0:
             print(f'✅文章收藏成功')
@@ -156,7 +156,7 @@ class SHCN():
 
     def article_share(self, id):
         json_data = {}
-        url = 'https://cnapi.shmedia.tech/media-basic-port/api/app/points/share/add'
+        url = 'https://hpapi.shmedia.tech/media-basic-port/api/app/points/share/add'
         response = make_request(url, json_data, 'post', self.headers)
         if response and response['code'] == 0:
             print(f'✅文章分享成功')
@@ -165,7 +165,7 @@ class SHCN():
 
     def video_view_task(self):
         json_data = {}
-        url = 'https://cnapi.shmedia.tech/media-basic-port/api/app/points/video/add'
+        url = 'https://hpapi.shmedia.tech/media-basic-port/api/app/points/video/add'
         response = requests.post(url, headers=self.headers, json=json_data, verify=self.verify).json()
         if response and response['code'] == 0:
             print(f'✅看片儿完成+1')
@@ -197,7 +197,7 @@ class SHCN():
             'targetType': 'content',
             'targetId': id,
         }
-        url = 'https://cnapi.shmedia.tech/media-basic-port/api/app/common/comment/add'
+        url = 'https://hpapi.shmedia.tech/media-basic-port/api/app/common/comment/add'
         response = requests.post(url, headers=self.headers, json=json_data).json()
         if response and response["code"] == 0:
             print(f'✅文章评论成功')
@@ -225,6 +225,7 @@ class SHCN():
 
     def main(self):
         counter = 0
+        self.login_score()
         self.sign()
         for j in range(5):
             self.video_view_task()
@@ -239,9 +240,7 @@ class SHCN():
             print(f'🐹随机抓取到一篇文章{article_id}，开始做任务......')
             self.article_read(article_id)
             time.sleep(random.randint(20, 35))
-            self.article_share(article_id)
-            time.sleep(random.randint(10, 18))
-            if counter <= 5:
+            if counter <= 1:
                 if self.isComment == '1':
                     self.article_comment_task(article_id)
                     time.sleep(random.randint(20, 40))
@@ -250,22 +249,27 @@ class SHCN():
                     time.sleep(random.randint(10, 25))
                 self.article_favor_task(article_id)
                 time.sleep(random.randint(10, 20))
+                self.article_share(article_id)
+                time.sleep(random.randint(10, 25))
+                # TODO 观看直播
+                # self.live_streaming()
             counter += 1
+        # TODO 商城活跃值任务（活跃值解锁兑换卡券）
         self.total_score()
         self.today_score()
         self.gift_list()
 
 
 if __name__ == '__main__':
-    env_name = 'SHCN_TOKEN'
+    env_name = 'SHHP_TOKEN'
     tokenStr = os.getenv(env_name)
     if not tokenStr:
         print(f'⛔️未获取到ck变量：请检查变量 {env_name} 是否填写')
         exit(0)
     tokens = re.split(r'&', tokenStr)
-    print(f"上海长宁共获取到{len(tokens)}个账号")
+    print(f"上海黄浦共获取到{len(tokens)}个账号")
     for i, account_info in enumerate(tokens, start=1):
         print(f"\n======== ▷ 第 {i} 个账号 ◁ ========")
-        SHCN(account_info).main()
+        SHHP(account_info).main()
         print("\n随机等待30-60s进行下一个账号")
         time.sleep(random.randint(30, 60))
