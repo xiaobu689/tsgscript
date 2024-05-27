@@ -258,7 +258,6 @@ class SHPT():
 if __name__ == '__main__':
     env_name = 'SHPT_TOKEN'
     tokenStr = os.getenv(env_name)
-    tokenStr = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkZTI1YTMxMDNlNGI0Y2I3OTVhOTAyMWI0MTczYjFiNzJhMmM7MzEwMTA3IiwiaWF0IjoxNzE2Nzk5Njc5LCJleHAiOjI3NTM1OTk2Nzl9.xvwEuzeRMQ5I-1D-g_ehUxprXWoK9ZpmVZniSo7aINMdVJBSUkh3c25s4vIJ3kUky0hoMOrIl75d48BZ4mwWpA#1'
     if not tokenStr:
         print(f'⛔️未获取到ck变量：请检查变量 {env_name} 是否填写')
         exit(0)

@@ -2,13 +2,12 @@
 浓五的酒馆
 
 路径：浓五小酒馆小程序
-用途：签到领积分，积分兑换话费，仅支持电信手机号
 变量名：nwbar
 格式： 任意请求头抓 Authorization 值
 
 定时设置：每天一次就行，时间随意
 cron: 33 8 * * *
-const $ = new Env("浓五的酒馆");
+const $ = new Env("浓五小酒馆");
 """
 import os
 import requests
@@ -64,7 +63,7 @@ class TTCY():
 if __name__ == '__main__':
     env_name = 'nwbar'
     token = os.getenv(env_name)
-    token = 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJtaW5pYXBwX2N1c3RvbWVyIiwic3ViIjoib0JMbkk1ZnllSnMzWU5WY2hpeFZWdXRCaHlETSIsImV4cCI6MTcxNjAyMzgxOH0.CWd7MeG-0Cl0P9Z-VpuAweeWxMY5Y82rWvtzEswuz9snbD8r-icU_Z3T8A6jfAsrdpassy7JLt7S_0hu-guQEg'
+    #token = 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJtaW5pYXBwX2N1c3RvbWVyIiwic3ViIjoib0JMbkk1ZnllSnMzWU5WY2hpeFZWdXRCaHlETSIsImV4cCI6MTcxNjAyMzgxOH0.CWd7MeG-0Cl0P9Z-VpuAweeWxMY5Y82rWvtzEswuz9snbD8r-icU_Z3T8A6jfAsrdpassy7JLt7S_0hu-guQEg'
     if not token:
         print(f'⛔️未获取到ck变量：请检查变量 {env_name} 是否填写')
         exit(0)

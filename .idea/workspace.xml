@@ -5,21 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ddd6a936-d130-44c7-9d8d-4d16ab3c823e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/reads/上海宝山.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reads/上海徐汇.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reads/上海普陀.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reads/上海杨浦.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reads/上海虹口.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reads/上海黄浦.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common.py" beforeDir="false" afterPath="$PROJECT_DIR$/common.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doing/上海嘉定.py" beforeDir="false" afterPath="$PROJECT_DIR$/reads/上海嘉定.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reads/上海长宁.py" beforeDir="false" afterPath="$PROJECT_DIR$/reads/上海长宁.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reads/上海静安.py" beforeDir="false" afterPath="$PROJECT_DIR$/reads/上海静安.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sundry/顺丰速运.py" beforeDir="false" afterPath="$PROJECT_DIR$/uncheck/顺丰速运.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vehicle/smart汽车.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vehicle/哪吒汽车.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vehicle/好奇车生活.js" beforeDir="false" afterPath="$PROJECT_DIR$/vehicle/好奇车生活.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discard/浓五小酒馆.py" beforeDir="false" afterPath="$PROJECT_DIR$/discard/浓五小酒馆.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reads/青岛新闻.js" beforeDir="false" afterPath="$PROJECT_DIR$/discard/青岛新闻.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,10 +74,10 @@
       <recent name="D:\workspace\src\tsgscript" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\workspace\src\tsgscript\discard" />
       <recent name="D:\workspace\src\tsgscript\reads" />
       <recent name="D:\workspace\src\tsgscript\uncheck" />
       <recent name="D:\workspace\src\tsgscript\sundry" />
-      <recent name="D:\workspace\src\tsgscript\discard" />
       <recent name="D:\workspace\src\tsgscript\vehicle" />
     </key>
   </component>

@@ -30,7 +30,7 @@ class SHJD():
         self.verify = False
         self.giftHeaders = {
             'Host': 'mall-api.shmedia.tech',
-            'Authorization': 'eyJhbGciOiJIUzUxMiJ9.eyJ1aWQiOjE3OTM1NDU4NjkyMzk4NTcxNTQsInN1YiI6InVzZXIiLCJzaXRlIjoiMzEwMTE0IiwiYXJlYVByZWZpeCI6ImpkIiwicm9sZXMiOlsiQlVZRVIiXSwibW9iaWxlIjoiMTc4NTQyNzk1NjUiLCJzaG9wSWQiOiIzMTAxMTQwMSIsImxpdmVNZXNzYWdlIjpudWxsLCJleHAiOjE3MTkwNDE2MzIsInV1aWQiOiI2YTk0OGEwZi03MGJhLTRhZDItYjNkZi0yZmI2Yjg5ZDJmMDAiLCJ1c2VybmFtZSI6Im1lZGlhX2IzZWNhYWRhIiwidGFyZ2V0IjoibWVkaWEifQ.U-rNA7XHMk-b5E3yPAQRm0SHo8KCtibP6lly7HSmWJmmZFBdXrxsp5OfGc7RORkh2UnoT36_99_Pvt5GJsEWpw',
+            'Authorization': self.token,
             'Sec-Fetch-Site': 'same-site',
             'Sec-Fetch-Mode': 'cors',
             'Origin': 'https://mall-mobile.shmedia.tech',
