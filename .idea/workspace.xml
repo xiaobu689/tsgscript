@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ddd6a936-d130-44c7-9d8d-4d16ab3c823e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/discard/浓五小酒馆.py" beforeDir="false" afterPath="$PROJECT_DIR$/discard/浓五小酒馆.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reads/青岛新闻.js" beforeDir="false" afterPath="$PROJECT_DIR$/discard/青岛新闻.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reads/上海崇明.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reads/上海长宁.py" beforeDir="false" afterPath="$PROJECT_DIR$/reads/上海长宁.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,8 +82,8 @@
       <recent name="D:\workspace\src\tsgscript\vehicle" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.上海徐汇">
-    <configuration name="上海虹口" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.上海崇明">
+    <configuration name="上海崇明" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="tsgscript" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -90,11 +91,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/doing" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/reads" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="D:\workspace\src\tsgscript\reads\上海虹口.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/reads/上海崇明.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -462,11 +463,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.上海崇明" />
         <item itemvalue="Python.上海徐汇" />
         <item itemvalue="Python.上海普陀" />
         <item itemvalue="Python.上海黄浦" />
         <item itemvalue="Python.上海宝山" />
-        <item itemvalue="Python.上海虹口" />
       </list>
     </recent_temporary>
   </component>
